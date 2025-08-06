@@ -5,6 +5,47 @@ import ServiceCard from "@/components/ServiceCard";
 import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
+function FloatingPaths({ position }: { position: number }) {
+  const paths = Array.from({ length: 36 }, (_, i) => ({
+    id: i,
+    d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
+      380 - i * 5 * position
+    } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
+      152 - i * 5 * position
+    } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
+      684 - i * 5 * position
+    } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
+    color: `rgba(15,23,42,${0.1 + i * 0.03})`,
+    width: 0.5 + i * 0.03,
+  }));
+
+  return (
+    <div className="absolute inset-0 pointer-events-none opacity-30">
+      <svg
+        className="w-full h-full text-white/20"
+        viewBox="0 0 696 316"
+        fill="none"
+      >
+        <title>Background Paths</title>
+        {paths.map((path) => (
+          <path
+            key={path.id}
+            d={path.d}
+            stroke="currentColor"
+            strokeWidth={path.width}
+            strokeOpacity={0.1 + path.id * 0.03}
+            className="animate-pulse"
+            style={{
+              animationDelay: `${path.id * 0.5}s`,
+              animationDuration: `${20 + Math.random() * 10}s`
+            }}
+          />
+        ))}
+      </svg>
+    </div>
+  );
+}
+
 const services = [
   {
     title: "RMN Cerebral",
@@ -101,6 +142,8 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="hero-gradient min-h-[600px] flex items-center">
           <div className="absolute inset-0 bg-black/20"></div>
+          <FloatingPaths position={1} />
+          <FloatingPaths position={-1} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">

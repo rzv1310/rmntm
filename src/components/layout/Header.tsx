@@ -61,7 +61,7 @@ export default function Header() {
   }, [location.pathname]);
 
   return (
-    <header className="fixed top-0 z-50 w-full transition-all duration-300">
+    <header className="fixed top-0 z-50 w-full">
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-center pt-4 pb-2">
         <NavMenu setActive={setActive}>

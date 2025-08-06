@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { HandWrittenButton } from "@/components/ui/hand-writing-button";
+import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import ServiceCard from "@/components/ServiceCard";
 import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
 import DisplayCards from "@/components/ui/display-cards";
@@ -198,10 +198,9 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center scroll-reveal">
-            <HandWrittenButton 
-              text="Vezi toate examinările"
-              href="/servicii"
+          <div className="scroll-reveal">
+            <HandWrittenTitle 
+              title="Vezi toate examinările"
             />
           </div>
         </div>

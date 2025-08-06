@@ -153,12 +153,12 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="relative min-h-[600px] flex items-center bg-neutral-950">
+        <div className="relative min-h-[600px] flex flex-col justify-center bg-neutral-950">
           <div className="absolute inset-0">
             <FloatingPaths position={1} />
             <FloatingPaths position={-1} />
           </div>
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
                 RMN Timișoara
@@ -180,10 +180,13 @@ export default function HomePage() {
                   </Link>
                 </GradientButton>
               </div>
-              
-              {/* Google Rating */}
-              <div className="mt-8 flex items-center justify-center gap-2 animate-fade-in-up">
-                <span className="text-white/90 text-lg font-medium">Google 5.0</span>
+            </div>
+          </div>
+          
+          {/* Google Rating - positioned at bottom */}
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8">
+            <div className="flex items-center justify-center gap-2 animate-fade-in-up">
+              <span className="text-white/90 text-lg font-medium">Google 5.0</span>
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <motion.svg

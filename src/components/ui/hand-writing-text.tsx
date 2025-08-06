@@ -24,7 +24,7 @@ function HandWrittenTitle({
     };
 
     return (
-        <div className="relative w-full max-w-4xl mx-auto py-24">
+        <div className="relative w-full max-w-2xl mx-auto py-12">
             <div className="absolute inset-0">
                 <motion.svg
                     width="100%"

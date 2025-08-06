@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import ServiceCard from "@/components/ServiceCard";
-import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
+import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown, ArrowRight } from "lucide-react";
 import DisplayCards from "@/components/ui/display-cards";
 import { useState } from "react";
+import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
 
 import { motion } from "framer-motion";
 
@@ -121,25 +122,36 @@ const advantages = [
 
 const faqs = [
   {
+    id: 1,
     question: "Ce este RMN-ul și cum funcționează?",
     answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și unde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
+    icon: "🧠",
+    iconPosition: "right" as const,
   },
   {
+    id: 2,
     question: "Cât durează o investigație RMN?",
     answer: "Durata variază în funcție de tipul investigației: RMN cerebral durează 30-45 minute, RMN coloană 30-40 minute, iar RMN abdominal poate dura 45-60 minute. Este important să rămâneți imobil pe parcursul examinării.",
+    icon: "⏱️",
+    iconPosition: "left" as const,
   },
   {
+    id: 3,
     question: "Este necesară o pregătire specială?",
     answer: "Pentru majoritatea investigațiilor RMN nu este necesară pregătire specială. Pentru RMN abdominal se recomandă post de 4-6 ore. Anunțați existența implanturilor metalice sau dispozitivelor medicale implantabile.",
+    icon: "📋",
+    iconPosition: "right" as const,
   },
   {
+    id: 4,
     question: "Când primesc rezultatele?",
     answer: "Rapoartele medicale sunt disponibile în 24-48 ore de la efectuarea investigației. Rezultatele sunt livrate pe film sau CD, împreună cu referatul medical detaliat.",
+    icon: "📊",
+    iconPosition: "left" as const,
   },
 ];
 
 export default function HomePage() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen">
@@ -253,7 +265,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -264,27 +276,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="medical-card rounded-xl overflow-hidden scroll-reveal">
-                <button
-                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between focus-ring"
-                >
-                  <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
-                  <ChevronDown 
-                    className={`h-5 w-5 text-muted-foreground transition-transform ${
-                      openFAQ === index ? 'rotate-180' : ''
-                    }`} 
-                  />
-                </button>
-                <div className={`faq-content ${openFAQ === index ? 'open' : ''}`}>
-                  <div className="px-6 pb-4">
-                    <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="scroll-reveal">
+            <FaqAccordion 
+              data={faqs}
+              className="max-w-[700px] mx-auto"
+              timestamp=""
+            />
           </div>
         </div>
       </section>

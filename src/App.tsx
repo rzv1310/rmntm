@@ -12,7 +12,7 @@ import RMNArticulatiiPage from "./pages/services/RMNArticulatiiPage";
 import RMNAbdominalPage from "./pages/services/RMNAbdominalPage";
 import RMNPelvinPage from "./pages/services/RMNPelvinPage";
 import RMNUmarPage from "./pages/services/RMNUmarPage";
-import RMNTimisoaraPage from "./pages/services/RMNTimisoaraPage";
+
 import RMNPrinCASPage from "./pages/RMNPrinCASPage";
 import PreturiRMNPage from "./pages/PreturiRMNPage";
 import ContactPage from "./pages/ContactPage";
@@ -39,7 +39,7 @@ const App = () => (
             <Route path="servicii/rmn-abdominal" element={<RMNAbdominalPage />} />
             <Route path="servicii/rmn-pelvin" element={<RMNPelvinPage />} />
             <Route path="servicii/rmn-umar" element={<RMNUmarPage />} />
-            <Route path="servicii/rmn-timisoara-medlife" element={<RMNTimisoaraPage />} />
+            
             <Route path="rmn-prin-cas" element={<RMNPrinCASPage />} />
             <Route path="preturi-rmn" element={<PreturiRMNPage />} />
             <Route path="contact" element={<ContactPage />} />

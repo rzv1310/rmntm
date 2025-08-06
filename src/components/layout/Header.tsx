@@ -18,7 +18,6 @@ const navigation = [
       { name: "RMN Abdominal", href: "/servicii/rmn-abdominal" },
       { name: "RMN Pelvin", href: "/servicii/rmn-pelvin" },
       { name: "RMN Umăr", href: "/servicii/rmn-umar" },
-      { name: "RMN Timișoara - Medlife", href: "/servicii/rmn-timisoara-medlife" },
     ],
   },
   { name: "Prețuri RMN", href: "/preturi-rmn" },

@@ -1,5 +1,6 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
+import { Button } from "@/components/ui/button";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone } from "lucide-react";
 
@@ -29,12 +30,12 @@ export default function RMNPelvinPage() {
         <section className="mb-12 scroll-reveal">
           <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Pelvin</h2>
-            <GradientButton asChild>
+            <Button asChild variant="medical" size="lg" className="bg-white text-primary hover:bg-white/90">
               <a href="tel:+40256404500" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 Programează acum
               </a>
-            </GradientButton>
+            </Button>
           </div>
         </section>
 

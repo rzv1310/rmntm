@@ -54,27 +54,6 @@ function HandWrittenTitle({
                         }}
                         className="text-black dark:text-white opacity-90"
                     />
-                    {subtitle && (
-                        <motion.path
-                            d="M 200 350 
-                               C 400 320, 600 320, 800 350
-                               C 900 360, 1000 380, 1000 400
-                               C 1000 420, 900 440, 800 450
-                               C 600 480, 400 480, 200 450"
-                            fill="none"
-                            strokeWidth="8"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            animate={{ pathLength: 1, opacity: 1 }}
-                            transition={{ 
-                              pathLength: { duration: 2, ease: "easeInOut", delay: 0.8 },
-                              opacity: { duration: 0.5, delay: 0.8 }
-                            }}
-                            className="text-black dark:text-white opacity-90"
-                        />
-                    )}
                 </motion.svg>
             </div>
             <div className="relative text-center z-10 flex flex-col items-center justify-center">
@@ -89,9 +68,9 @@ function HandWrittenTitle({
                 {subtitle && (
                     <motion.p
                         className="text-xl text-black/80 dark:text-white/80"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.3, duration: 0.8 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1, duration: 0.8 }}
                     >
                         {subtitle}
                     </motion.p>

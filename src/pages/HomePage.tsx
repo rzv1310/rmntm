@@ -104,7 +104,7 @@ const advantages = [
   {
     icon: Users,
     title: "Radiologi cu experiență",
-    description: "Interpretare rapidă și corectă de către medici cu vastă expertiză în imagistică medicală.",
+    description: "Interpretare rapidă și corectă.",
   },
   {
     icon: Clock,
@@ -228,7 +228,7 @@ export default function HomePage() {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-burgundy-dark">
                   <advantage.icon className="h-8 w-8 text-burgundy-dark-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{advantage.title}</h3>
+                <h3 className="text-lg font-semibold text-black mb-2">{advantage.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
               </div>
             ))}

@@ -230,8 +230,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advantages.map((advantage, index) => (
               <div key={index} className="text-center medical-card p-6 scroll-reveal">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-hero">
-                  <advantage.icon className="h-8 w-8 text-white" />
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-burgundy-dark">
+                  <advantage.icon className="h-8 w-8 text-burgundy-dark-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{advantage.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>

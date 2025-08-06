@@ -18,18 +18,14 @@ export default function MobileCTABar() {
       <div className="flex p-4 space-x-3">
         <GradientButton asChild className="flex-1">
           <a href="tel:+40256404500" className="flex items-center justify-center gap-2">
-            <div className="bg-burgundy-dark rounded-full p-1">
-              <Phone className="h-3 w-3 text-burgundy-dark-foreground" />
-            </div>
+            <Phone className="h-4 w-4" />
             Programează-te
           </a>
         </GradientButton>
         
         <GradientButton asChild variant="variant" className="flex-1">
           <Link to="/preturi-rmn" className="flex items-center justify-center gap-2">
-            <div className="bg-burgundy-dark rounded-full p-1">
-              <DollarSign className="h-3 w-3 text-burgundy-dark-foreground" />
-            </div>
+            <DollarSign className="h-4 w-4" />
             Prețuri
           </Link>
         </GradientButton>

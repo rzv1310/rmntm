@@ -19,17 +19,13 @@ export default function CustomBreadcrumb({ items, className }: CustomBreadcrumbP
         to="/"
         className="breadcrumb-item flex items-center gap-1 hover:text-primary focus-ring rounded px-2 py-1"
       >
-        <div className="bg-burgundy-dark rounded-full p-1">
-          <Home className="h-3 w-3 text-burgundy-dark-foreground" />
-        </div>
+        <Home className="h-4 w-4" />
         <span>Acasă</span>
       </Link>
       
       {items.map((item, index) => (
         <div key={index} className="flex items-center space-x-1">
-          <div className="bg-burgundy-dark rounded-full p-1">
-            <ChevronRight className="h-3 w-3 text-burgundy-dark-foreground" />
-          </div>
+          <ChevronRight className="h-4 w-4 text-muted-foreground" />
           {item.href ? (
             <Link
               to={item.href}

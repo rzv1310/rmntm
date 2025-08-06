@@ -1,6 +1,7 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, CheckCircle, Clock } from "lucide-react";
 
 export default function RMNAbdominalPage() {
@@ -19,7 +20,7 @@ export default function RMNAbdominalPage() {
         <div className="mb-12 scroll-reveal">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">RMN Abdominal</h1>
-            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">Decontat CAS</span>
+            <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">Decontat CAS</GradientButton>
           </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Diagnostic complet pentru organele interne din cavitatea abdominală fără radiații ionizante.

@@ -1,6 +1,7 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 
 const indicatii = [
@@ -43,9 +44,9 @@ export default function RMNCerebralPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Cerebral
             </h1>
-            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">
+            <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">
               Decontat CAS
-            </span>
+            </GradientButton>
           </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Diagnostic neurologic de încredere pentru evaluarea detaliată a creierului și structurilor sale, 

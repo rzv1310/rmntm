@@ -26,7 +26,7 @@ export default function ServiceCard({
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
           {isDecontCAS && (
-            <span className="bg-success text-success-foreground text-xs font-medium px-2 py-1 rounded-full">
+            <span className="gradient-button-variant text-xs font-medium px-2 py-1 rounded-full text-white">
               Decontat CAS
             </span>
           )}
@@ -46,7 +46,7 @@ export default function ServiceCard({
         )}
       </div>
       
-      <Button asChild variant="outline" className="w-full group">
+      <Button asChild variant="medical" className="w-full group">
         <Link to={href} className="flex items-center justify-center gap-2">
           <span>Află mai multe</span>
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

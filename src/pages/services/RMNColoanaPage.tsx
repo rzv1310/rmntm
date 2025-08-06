@@ -62,7 +62,7 @@ export default function RMNColoanaPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Coloană Vertebrală
             </h1>
-            <span className="bg-success text-success-foreground text-sm font-medium px-3 py-1 rounded-full">
+            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">
               Decontat CAS
             </span>
           </div>

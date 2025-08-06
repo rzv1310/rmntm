@@ -200,7 +200,8 @@ export default function HomePage() {
 
           <div className="scroll-reveal">
             <HandWrittenTitle 
-              title="Vezi toate examinările"
+              title="Vezi toate"
+              subtitle="examinările RMN"
             />
           </div>
         </div>

@@ -102,11 +102,6 @@ const services = [
 
 const advantages = [
   {
-    icon: Award,
-    title: "Echipament de ultimă generație",
-    description: "Tehnologie de vârf pentru imagini clare și detaliate, esențiale pentru un diagnostic precis.",
-  },
-  {
     icon: Users,
     title: "Medici specialiști cu experiență",
     description: "Interpretare rapidă și corectă de către radiologi cu vastă experiență în imagistică medicală.",

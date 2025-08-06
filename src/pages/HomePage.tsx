@@ -143,7 +143,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-20">
         <div className="relative min-h-[600px] flex items-center bg-neutral-950">
           <div className="absolute inset-0">
             <FloatingPaths position={1} />

@@ -61,14 +61,7 @@ export default function Header() {
   }, [location.pathname]);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled
-          ? "glass shadow-medium backdrop-blur-md"
-          : "bg-background/95 backdrop-blur-sm"
-      )}
-    >
+    <header className="fixed top-0 z-50 w-full transition-all duration-300">
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-center pt-4 pb-2">
         <NavMenu setActive={setActive}>

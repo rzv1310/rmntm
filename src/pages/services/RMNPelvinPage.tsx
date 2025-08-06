@@ -19,7 +19,7 @@ export default function RMNPelvinPage() {
         <div className="mb-12 scroll-reveal">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">RMN Pelvin</h1>
-            <span className="bg-success text-success-foreground text-sm font-medium px-3 py-1 rounded-full">Decontat CAS</span>
+            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">Decontat CAS</span>
           </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Evaluare detaliată pentru sănătatea pelvină, utilă în ginecologie și urologie.

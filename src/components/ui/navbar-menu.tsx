@@ -114,7 +114,7 @@ export const HoveredLink = ({ children, to, ...rest }: any) => {
     <Link
       to={to}
       {...rest}
-      className="text-muted-foreground hover:text-foreground transition-colors py-2 px-3 rounded-lg hover:bg-accent font-handwritten font-light uppercase"
+      className="text-muted-foreground hover:text-foreground transition-colors py-2 px-3 rounded-lg font-handwritten font-light uppercase"
     >
       {children}
     </Link>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import ServiceCard from "@/components/ServiceCard";
 import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -111,18 +112,18 @@ export default function HomePage() {
                 Găsește investigația potrivită și programează-te rapid la clinicile de încredere.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
-                <Button asChild variant="medical" size="xl" className="bg-white text-primary hover:bg-white/90">
+                <GradientButton asChild className="min-w-[200px]">
                   <a href="tel:+40256404500" className="flex items-center gap-2">
                     <Phone className="h-5 w-5" />
                     Programează-te acum
                   </a>
-                </Button>
-                <Button asChild variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary">
+                </GradientButton>
+                <GradientButton asChild variant="variant" className="min-w-[200px]">
                   <Link to="/servicii" className="flex items-center gap-2">
                     <Calendar className="h-5 w-5" />
                     Vezi serviciile
                   </Link>
-                </Button>
+                </GradientButton>
               </div>
             </div>
           </div>
@@ -234,18 +235,18 @@ export default function HomePage() {
             Contactează-ne pentru o programare rapidă sau pentru informații suplimentare despre serviciile noastre.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
-            <Button asChild variant="medical" size="xl" className="bg-white text-primary hover:bg-white/90">
+            <GradientButton asChild className="min-w-[200px]">
               <a href="tel:+40256404500" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 0256 404 500
               </a>
-            </Button>
-            <Button asChild variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary">
+            </GradientButton>
+            <GradientButton asChild variant="variant" className="min-w-[200px]">
               <Link to="/contact" className="flex items-center gap-2">
                 Contact complet
                 <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
               </Link>
-            </Button>
+            </GradientButton>
           </div>
         </div>
       </section>

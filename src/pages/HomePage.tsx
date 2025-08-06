@@ -187,46 +187,45 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8">
             <div className="flex items-center justify-center gap-2 animate-fade-in-up">
               <span className="text-white/90 text-lg font-medium">Google 5.0</span>
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <motion.svg
-                      key={i}
-                      className="w-6 h-6"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ 
-                        delay: i * 0.1,
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 10
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <motion.svg
+                    key={i}
+                    className="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ 
+                      delay: i * 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10
+                    }}
+                  >
+                    <motion.path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="url(#star-gradient)"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        rotate: [0, 5, -5, 0],
                       }}
-                    >
-                      <motion.path
-                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                        fill="url(#star-gradient)"
-                        animate={{
-                          scale: [1, 1.2, 1],
-                          rotate: [0, 5, -5, 0],
-                        }}
-                        transition={{
-                          duration: 2.5,
-                          delay: i * 0.2,
-                          repeat: Infinity,
-                          repeatType: "loop",
-                          ease: "easeInOut"
-                        }}
-                      />
-                      <defs>
-                        <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: "#fbbf24", stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: "#f97316", stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
-                    </motion.svg>
-                  ))}
-                </div>
+                      transition={{
+                        duration: 2.5,
+                        delay: i * 0.2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut"
+                      }}
+                    />
+                    <defs>
+                      <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style={{ stopColor: "#fbbf24", stopOpacity: 1 }} />
+                        <stop offset="100%" style={{ stopColor: "#f97316", stopOpacity: 1 }} />
+                      </linearGradient>
+                    </defs>
+                  </motion.svg>
+                ))}
               </div>
             </div>
           </div>

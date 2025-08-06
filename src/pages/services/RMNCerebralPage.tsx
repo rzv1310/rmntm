@@ -43,7 +43,7 @@ export default function RMNCerebralPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Cerebral
             </h1>
-            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">
+            <span className="bg-success text-success-foreground text-sm font-medium px-3 py-1 rounded-full">
               Decontat CAS
             </span>
           </div>

@@ -19,7 +19,7 @@ export default function RMNUmarPage() {
         <div className="mb-12 scroll-reveal">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">RMN Umăr</h1>
-            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">Decontat CAS</span>
+            <span className="bg-success text-success-foreground text-sm font-medium px-3 py-1 rounded-full">Decontat CAS</span>
           </div>
         </div>
 

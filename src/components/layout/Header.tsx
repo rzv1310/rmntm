@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { GradientButton } from "@/components/ui/gradient-button";
+import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Menu as NavMenu, MenuItem, HoveredLink } from "@/components/ui/navbar-menu";
@@ -99,12 +99,12 @@ export default function Header() {
             <div className="flex flex-col space-y-2">
               <HoveredLink to="/contact">Informații contact</HoveredLink>
               <div className="pt-2">
-                <GradientButton asChild>
+                <Button asChild variant="medical" size="sm">
                   <a href="tel:+40256404500" className="flex items-center gap-2">
                     <Phone className="h-4 w-4" />
                     Programează-te
                   </a>
-                </GradientButton>
+                </Button>
               </div>
             </div>
           </MenuItem>
@@ -123,13 +123,15 @@ export default function Header() {
           </Link>
 
           {/* Mobile menu button */}
-          <GradientButton
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
-            className="focus-ring p-2"
+            className="focus-ring"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </GradientButton>
+          </Button>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -184,12 +186,12 @@ export default function Header() {
                 ))}
                 
                 <div className="pt-4 border-t border-border">
-                  <GradientButton asChild className="w-full">
+                  <Button asChild variant="medical" size="lg" className="w-full">
                     <a href="tel:+40256404500" className="flex items-center justify-center gap-2">
                       <Phone className="h-4 w-4" />
                       Programează-te
                     </a>
-                  </GradientButton>
+                  </Button>
                 </div>
               </div>
             </div>

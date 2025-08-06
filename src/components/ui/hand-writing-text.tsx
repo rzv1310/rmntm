@@ -58,7 +58,7 @@ function HandWrittenTitle({
             </div>
             <div className="relative text-center z-10 flex flex-col items-center justify-center">
                 <motion.h1
-                    className="text-lg md:text-3xl text-black dark:text-white tracking-tighter flex items-center gap-2"
+                    className="text-lg md:text-3xl text-black dark:text-white tracking-tighter flex items-center gap-2 font-handwritten"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}

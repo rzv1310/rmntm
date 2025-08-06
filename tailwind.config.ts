@@ -20,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'elegant': ['Inter', 'sans-serif'],
+				'handwritten': ['Kalam', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

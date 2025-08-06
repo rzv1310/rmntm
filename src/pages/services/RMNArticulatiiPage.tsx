@@ -1,6 +1,5 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
-import { Button } from "@/components/ui/button";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, CheckCircle, Eye, AlertCircle } from "lucide-react";
 
@@ -252,15 +251,15 @@ export default function RMNArticulatiiPage() {
               Obține un diagnostic precis pentru problemele articulare și începe tratamentul optim.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="medical" size="lg" className="bg-white text-primary hover:bg-white/90">
+              <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Programează acum
                 </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+              </GradientButton>
+              <GradientButton asChild variant="variant">
                 <a href="/preturi-rmn">Vezi toate prețurile</a>
-              </Button>
+              </GradientButton>
             </div>
           </div>
         </section>

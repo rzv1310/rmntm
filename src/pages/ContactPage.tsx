@@ -1,6 +1,6 @@
 
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
@@ -60,12 +60,12 @@ export default function ContactPage() {
           <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te acum</h2>
             <p className="text-white/90 mb-6">Suntem aici să te ajutăm cu orice întrebare.</p>
-            <Button asChild variant="medical" size="lg" className="bg-white text-primary hover:bg-white/90">
+            <GradientButton asChild>
               <a href="tel:+40256404500" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 Sună acum
               </a>
-            </Button>
+            </GradientButton>
           </div>
         </section>
       </div>

@@ -1,6 +1,6 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, MapPin, Clock } from "lucide-react";
 
 export default function RMNTimisoaraPage() {
@@ -48,12 +48,12 @@ export default function RMNTimisoaraPage() {
         <section className="mb-12 scroll-reveal">
           <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te la Medlife Timișoara</h2>
-            <Button asChild variant="medical" size="lg" className="bg-white text-primary hover:bg-white/90">
+            <GradientButton asChild>
               <a href="tel:+40256404500" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 0256 404 500
               </a>
-            </Button>
+            </GradientButton>
           </div>
         </section>
 

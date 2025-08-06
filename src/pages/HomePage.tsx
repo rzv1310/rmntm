@@ -124,7 +124,7 @@ const faqs = [
   {
     id: 1,
     question: "Ce este RMN-ul și cum funcționează?",
-    answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și unde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
+    answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și onde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
     icon: "🧠",
     iconPosition: "right" as const,
   },
@@ -132,21 +132,17 @@ const faqs = [
     id: 2,
     question: "Cât durează o investigație RMN?",
     answer: "Durata variază în funcție de tipul investigației: RMN cerebral durează 30-45 minute, RMN coloană 30-40 minute, iar RMN abdominal poate dura 45-60 minute. Este important să rămâneți imobil pe parcursul examinării.",
-    icon: "⏱️",
-    iconPosition: "left" as const,
   },
   {
     id: 3,
     question: "Este necesară o pregătire specială?",
     answer: "Pentru majoritatea investigațiilor RMN nu este necesară pregătire specială. Pentru RMN abdominal se recomandă post de 4-6 ore. Anunțați existența implanturilor metalice sau dispozitivelor medicale implantabile.",
-    icon: "📋",
-    iconPosition: "right" as const,
   },
   {
     id: 4,
     question: "Când primesc rezultatele?",
     answer: "Rapoartele medicale sunt disponibile în 24-48 ore de la efectuarea investigației. Rezultatele sunt livrate pe film sau CD, împreună cu referatul medical detaliat.",
-    icon: "📊",
+    icon: "⏱️",
     iconPosition: "left" as const,
   },
 ];

@@ -139,6 +139,9 @@
     --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
 
+    --burgundy-dark: 0 45% 30%;
+    --burgundy-dark-foreground: 0 0% 100%;
+
     --warning: 45 93% 47%;
     --warning-foreground: 0 0% 100%;
 
@@ -194,6 +197,9 @@
 
     --success: 142 76% 41%;
     --success-foreground: 224 71% 4%;
+
+    --burgundy-dark: 0 45% 35%;
+    --burgundy-dark-foreground: 0 0% 100%;
 
     --warning: 45 93% 52%;
     --warning-foreground: 224 71% 4%;

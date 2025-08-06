@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GradientButton } from "@/components/ui/gradient-button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -46,12 +46,12 @@ export default function ServiceCard({
         )}
       </div>
       
-      <GradientButton asChild className="w-full group">
+      <Button asChild variant="medical" className="w-full group">
         <Link to={href} className="flex items-center justify-center gap-2">
           <span>Află mai multe</span>
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
-      </GradientButton>
+      </Button>
     </div>
   );
 }

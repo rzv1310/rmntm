@@ -123,7 +123,7 @@ const advantages = [
 const faqs = [
   {
     id: 1,
-    question: "Ce este RMN-ul și cum funcționează?",
+    question: "Ce este RMN?",
     answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și onde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
     icon: "🧠",
     iconPosition: "right" as const,
@@ -140,8 +140,8 @@ const faqs = [
   },
   {
     id: 4,
-    question: "Când primesc rezultatele?",
-    answer: "Rapoartele medicale sunt disponibile în 24-48 ore de la efectuarea investigației. Rezultatele sunt livrate pe film sau CD, împreună cu referatul medical detaliat.",
+    question: "În cât timp primesc rezultatele iRM?",
+    answer: "Rapoartele medicale sunt disponibile în aprox. 2-5 zile de la efectuarea investigației. Rezultatele sunt livrate pe film și CD / DVD, împreună cu referatul medical detaliat.",
     icon: "⏱️",
     iconPosition: "left" as const,
   },

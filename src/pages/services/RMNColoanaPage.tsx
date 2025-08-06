@@ -1,6 +1,5 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
-import { Button } from "@/components/ui/button";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, CheckCircle, AlertTriangle } from "lucide-react";
 
@@ -208,15 +207,15 @@ export default function RMNColoanaPage() {
               Diagnosticul rapid și precis este esențial pentru tratamentul optim al afecțiunilor coloanei.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="medical" size="lg" className="bg-white text-primary hover:bg-white/90">
+              <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Programează acum
                 </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+              </GradientButton>
+              <GradientButton asChild variant="variant">
                 <a href="/preturi-rmn">Vezi prețurile</a>
-              </Button>
+              </GradientButton>
             </div>
           </div>
         </section>

@@ -1,6 +1,5 @@
 
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { GradientButton } from "@/components/ui/gradient-button";
 import ServiceCard from "@/components/ServiceCard";
 import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
@@ -201,12 +200,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center scroll-reveal">
-            <Button asChild variant="outline" size="lg">
+            <GradientButton asChild variant="variant">
               <Link to="/servicii" className="flex items-center gap-2">
                 Vezi toate serviciile
                 <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
               </Link>
-            </Button>
+            </GradientButton>
           </div>
         </div>
       </section>

@@ -5,6 +5,8 @@ import ServiceCard from "@/components/ServiceCard";
 import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
+import { motion } from "framer-motion";
+
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
     id: i,
@@ -15,29 +17,35 @@ function FloatingPaths({ position }: { position: number }) {
     } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
       684 - i * 5 * position
     } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
-    color: `rgba(15,23,42,${0.1 + i * 0.03})`,
+    color: `rgba(255,255,255,${0.1 + i * 0.02})`,
     width: 0.5 + i * 0.03,
   }));
 
   return (
-    <div className="absolute inset-0 pointer-events-none opacity-30">
+    <div className="absolute inset-0 pointer-events-none">
       <svg
-        className="w-full h-full text-white/20"
+        className="w-full h-full text-white"
         viewBox="0 0 696 316"
         fill="none"
       >
         <title>Background Paths</title>
         {paths.map((path) => (
-          <path
+          <motion.path
             key={path.id}
             d={path.d}
             stroke="currentColor"
             strokeWidth={path.width}
-            strokeOpacity={0.1 + path.id * 0.03}
-            className="animate-pulse"
-            style={{
-              animationDelay: `${path.id * 0.5}s`,
-              animationDuration: `${20 + Math.random() * 10}s`
+            strokeOpacity={0.15 + path.id * 0.02}
+            initial={{ pathLength: 0.3, opacity: 0.4 }}
+            animate={{
+              pathLength: 1,
+              opacity: [0.2, 0.6, 0.2],
+              pathOffset: [0, 1, 0],
+            }}
+            transition={{
+              duration: 20 + Math.random() * 10,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
             }}
           />
         ))}
@@ -140,10 +148,11 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="hero-gradient min-h-[600px] flex items-center">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <FloatingPaths position={1} />
-          <FloatingPaths position={-1} />
+        <div className="relative min-h-[600px] flex items-center bg-neutral-950">
+          <div className="absolute inset-0">
+            <FloatingPaths position={1} />
+            <FloatingPaths position={-1} />
+          </div>
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">

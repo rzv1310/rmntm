@@ -33,7 +33,9 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
-      <ArrowUp className="h-4 w-4" />
+      <div className="bg-burgundy-dark rounded-full p-1">
+        <ArrowUp className="h-3 w-3 text-burgundy-dark-foreground" />
+      </div>
     </Button>
   );
 }

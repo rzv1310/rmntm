@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { GradientButton } from "@/components/ui/gradient-button";
 import ServiceCard from "@/components/ServiceCard";
-import DisplayCards from "@/components/ui/display-cards";
 import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -101,34 +100,21 @@ const services = [
   },
 ];
 
-const advantageCards = [
+const advantages = [
   {
-    icon: <Award className="size-4 text-white" />,
-    title: "Echipament de ultimă generație",
-    description: "Tehnologie de vârf pentru imagini clare și detaliate",
-    date: "Disponibil acum",
-    className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+    icon: Users,
+    title: "Medici specialiști cu experiență",
+    description: "Interpretare rapidă și corectă de către radiologi cu vastă experiență în imagistică medicală.",
   },
   {
-    icon: <Users className="size-4 text-white" />,
-    title: "Radiologi cu experiență",
-    description: "Interpretare rapidă și corectă de către medici cu vastă expertiză în imagistică medicală",
-    date: "Echipa expertă",
-    className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
-  },
-  {
-    icon: <Clock className="size-4 text-white" />,
+    icon: Clock,
     title: "Programări rapide",
-    description: "Timpi de așteptare reduși",
-    date: "Acces rapid",
-    className: "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
+    description: "Sistem de programare eficient adaptat nevoilor dumneavoastră, cu timpi de așteptare reduși.",
   },
   {
-    icon: <Shield className="size-4 text-white" />,
+    icon: Shield,
     title: "Decontare prin CAS",
-    description: "RMN cu bilet de trimitere",
-    date: "În condiții legale",
-    className: "[grid-area:stack] translate-x-48 translate-y-30 hover:translate-y-20",
+    description: "Serviciile RMN sunt decontate prin Casa de Asigurări de Sănătate, în condițiile legii.",
   },
 ];
 
@@ -236,8 +222,16 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="flex justify-center scroll-reveal">
-            <DisplayCards cards={advantageCards} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="text-center medical-card p-6 scroll-reveal">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-burgundy-dark">
+                  <advantage.icon className="h-8 w-8 text-burgundy-dark-foreground" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">{advantage.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{advantage.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

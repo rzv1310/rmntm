@@ -152,12 +152,10 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-                RMN Timișoara – 
-                <span className="block text-white/90">Investigații de încredere</span>
+                RMN Timișoara
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
-                Platforma ta completă pentru informații despre serviciile RMN. 
-                Găsește investigația potrivită și programează-te rapid la clinicile de încredere.
+                Imagistica de încredere în Timișoara, cu programare și rezultate rapide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
                 <GradientButton asChild className="min-w-[200px]">

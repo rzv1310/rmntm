@@ -64,7 +64,7 @@ export default function Header() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-center pt-4 pb-2">
         <NavMenu setActive={setActive}>
-          <Link to="/" className="text-foreground hover:text-primary font-medium py-2 px-3 rounded-lg transition-colors">
+          <Link to="/" className="text-foreground hover:text-primary font-elegant font-light py-2 px-3 rounded-lg transition-colors">
             Acasă
           </Link>
           
@@ -85,7 +85,7 @@ export default function Header() {
             </div>
           </MenuItem>
           
-          <Link to="/contact" className="text-foreground hover:text-primary font-medium py-2 px-3 rounded-lg transition-colors">
+          <Link to="/contact" className="text-foreground hover:text-primary font-elegant font-light py-2 px-3 rounded-lg transition-colors">
             Contact
           </Link>
         </NavMenu>

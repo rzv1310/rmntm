@@ -204,13 +204,15 @@ export default function HomePage() {
                         d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
                         fill="url(#star-gradient)"
                         animate={{
-                          scale: [1, 1.1, 1],
+                          scale: [1, 1.2, 1],
+                          rotate: [0, 5, -5, 0],
                         }}
                         transition={{
-                          duration: 2,
+                          duration: 2.5,
                           delay: i * 0.2,
                           repeat: Infinity,
-                          repeatType: "loop"
+                          repeatType: "loop",
+                          ease: "easeInOut"
                         }}
                       />
                       <defs>

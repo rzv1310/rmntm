@@ -128,7 +128,7 @@ export default function Header() {
                       <div>
                         <Link
                           to={item.href}
-                          className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent font-handwritten font-light uppercase"
+                          className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary font-handwritten font-light uppercase"
                           onClick={closeMenu}
                         >
                           {item.name}
@@ -138,7 +138,7 @@ export default function Header() {
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent font-handwritten font-light uppercase"
+                              className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground font-handwritten font-light uppercase"
                               onClick={closeMenu}
                             >
                               {subItem.name}
@@ -152,8 +152,8 @@ export default function Header() {
                         className={cn(
                           "block rounded-lg px-3 py-2 text-base font-medium transition-colors font-handwritten font-light uppercase",
                           location.pathname === item.href
-                            ? "text-primary bg-accent"
-                            : "text-foreground hover:text-primary hover:bg-accent"
+                            ? "text-primary"
+                            : "text-foreground hover:text-primary"
                         )}
                         onClick={closeMenu}
                       >

@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
+import { LogoProcessor } from "@/components/LogoProcessor";
 
 const footerNavigation = {
   servicii: [
@@ -24,6 +26,14 @@ const footerNavigation = {
 };
 
 export default function Footer() {
+  const [logoUrl, setLogoUrl] = useState("/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png");
+  const [showProcessor, setShowProcessor] = useState(true);
+
+  const handleLogoProcessed = (newLogoUrl: string) => {
+    setLogoUrl(newLogoUrl);
+    setShowProcessor(false);
+  };
+
   return (
     <footer className="bg-gradient-soft border-t border-border">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -32,7 +42,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" 
+                src={logoUrl} 
                 alt="RMN Logo" 
                 className="h-8 w-8"
               />
@@ -136,6 +146,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {showProcessor && (
+        <LogoProcessor 
+          currentLogoUrl="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png"
+          onLogoProcessed={handleLogoProcessed}
+        />
+      )}
     </footer>
   );
 }

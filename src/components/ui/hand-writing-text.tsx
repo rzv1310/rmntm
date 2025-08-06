@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface HandWrittenTitleProps {
     title?: string;
@@ -11,27 +12,18 @@ function HandWrittenTitle({
     title = "Hand Written",
     subtitle = "Optional subtitle",
 }: HandWrittenTitleProps) {
-    const draw = {
-        hidden: { pathLength: 0, opacity: 0 },
-        visible: {
-            pathLength: 1,
-            opacity: 1,
-            transition: {
-                pathLength: { duration: 2.5, ease: "easeInOut" },
-                opacity: { duration: 0.5 },
-            },
-        },
-    };
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <div className="relative w-full max-w-2xl mx-auto py-12">
+        <div ref={ref} className="relative w-full max-w-2xl mx-auto py-12">
             <div className="absolute inset-0">
                 <motion.svg
                     width="100%"
                     height="100%"
                     viewBox="0 0 1200 600"
                     initial="hidden"
-                    animate="visible"
+                    animate={isInView ? "visible" : "hidden"}
                     className="w-full h-full"
                 >
                     <title>KokonutUI</title>
@@ -47,7 +39,7 @@ function HandWrittenTitle({
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         initial={{ pathLength: 0, opacity: 0 }}
-                        animate={{ pathLength: 1, opacity: 1 }}
+                        animate={isInView ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
                         transition={{ 
                           pathLength: { duration: 2.5, ease: "easeInOut" },
                           opacity: { duration: 0.5 }
@@ -60,7 +52,7 @@ function HandWrittenTitle({
                 <motion.h1
                     className="text-lg md:text-3xl text-black dark:text-white tracking-tighter flex items-center gap-2 font-handwritten"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
                     {title}
@@ -69,7 +61,7 @@ function HandWrittenTitle({
                     <motion.p
                         className="text-xl text-black/80 dark:text-white/80 font-handwritten font-light"
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ delay: 1, duration: 0.8 }}
                     >
                         {subtitle}

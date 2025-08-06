@@ -31,9 +31,11 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-hero">
-                <span className="text-white font-bold text-sm">R</span>
-              </div>
+              <img 
+                src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" 
+                alt="RMN Logo" 
+                className="h-8 w-8"
+              />
               <span className="text-xl font-bold gradient-text">RMN Timișoara</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">

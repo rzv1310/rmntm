@@ -165,9 +165,9 @@ export default function HomePage() {
                   </a>
                 </GradientButton>
                 <GradientButton asChild variant="variant" className="min-w-[200px]">
-                  <Link to="/servicii" className="flex items-center gap-2">
+                  <Link to="/preturi-rmn" className="flex items-center gap-2">
                     <Calendar className="h-5 w-5" />
-                    Vezi investigații
+                    Prețuri RMN
                   </Link>
                 </GradientButton>
               </div>

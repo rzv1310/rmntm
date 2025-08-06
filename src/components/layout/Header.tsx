@@ -62,33 +62,24 @@ export default function Header() {
   return (
     <header className="fixed top-0 z-50 w-full">
       {/* Desktop Navigation */}
-      <div className="hidden md:flex justify-center pt-4 pb-2">
-        <NavMenu setActive={setActive}>
-          <Link to="/" className="text-foreground hover:text-primary font-handwritten font-light py-2 px-3 rounded-lg transition-colors uppercase">
-            Acasă
-          </Link>
-          
-          <MenuItem setActive={setActive} active={active} item="Servicii">
-            <div className="grid grid-cols-2 gap-4 p-2 min-w-[400px]">
-              {navigation.find(item => item.name === "Servicii")?.submenu?.map((service) => (
-                <HoveredLink key={service.href} to={service.href}>
-                  {service.name}
-                </HoveredLink>
-              ))}
-            </div>
-          </MenuItem>
-          
-          <MenuItem setActive={setActive} active={active} item="Prețuri & CAS">
-            <div className="flex flex-col space-y-2">
-              <HoveredLink to="/preturi-rmn">Prețuri RMN</HoveredLink>
-              <HoveredLink to="/rmn-prin-cas">RMN prin CAS</HoveredLink>
-            </div>
-          </MenuItem>
-          
-          <Link to="/contact" className="text-foreground hover:text-primary font-handwritten font-light py-2 px-3 rounded-lg transition-colors uppercase">
-            Contact
-          </Link>
-        </NavMenu>
+      <div className="hidden md:flex items-center justify-between w-full px-6 py-4 bg-background/80 backdrop-blur-sm border-b border-border">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-2 focus-ring rounded-lg">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-hero">
+            <span className="text-white font-bold text-sm">R</span>
+          </div>
+          <span className="text-xl font-bold gradient-text">RMN Timișoara</span>
+        </Link>
+
+        {/* Phone Icon */}
+        <a 
+          href="tel:+40256404500" 
+          className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+          aria-label="Sună la 0256 404 500"
+        >
+          <Phone className="h-6 w-6" />
+          <span className="font-medium">0256 404 500</span>
+        </a>
       </div>
 
       {/* Mobile Navigation */}

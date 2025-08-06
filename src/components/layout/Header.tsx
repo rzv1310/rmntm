@@ -65,11 +65,9 @@ export default function Header() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-center pt-4 pb-2">
         <NavMenu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Acasă">
-            <div className="flex flex-col space-y-2">
-              <HoveredLink to="/">Pagina principală</HoveredLink>
-            </div>
-          </MenuItem>
+          <Link to="/" className="text-foreground hover:text-primary font-medium py-2 px-3 rounded-lg transition-colors">
+            Acasă
+          </Link>
           
           <MenuItem setActive={setActive} active={active} item="Servicii">
             <div className="grid grid-cols-2 gap-4 p-2 min-w-[400px]">

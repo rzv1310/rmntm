@@ -1,7 +1,6 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { Button } from "@/components/ui/button";
-import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, CheckCircle, Eye, AlertCircle } from "lucide-react";
 
 const indicatii = [
@@ -73,9 +72,9 @@ export default function RMNArticulatiiPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Articulații
             </h1>
-            <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">
+            <span className="gradient-button-variant text-sm font-medium px-3 py-1 rounded-full text-white">
               Decontat CAS
-            </GradientButton>
+            </span>
           </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Investigații detaliate pentru sănătatea articulară cu imagini clare ale articulațiilor 

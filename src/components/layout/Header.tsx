@@ -64,7 +64,7 @@ export default function Header() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-center pt-4 pb-2">
         <NavMenu setActive={setActive}>
-          <Link to="/" className="text-foreground hover:text-primary font-elegant font-light py-2 px-3 rounded-lg transition-colors">
+          <Link to="/" className="text-foreground hover:text-primary font-handwritten font-light py-2 px-3 rounded-lg transition-colors uppercase">
             Acasă
           </Link>
           
@@ -85,7 +85,7 @@ export default function Header() {
             </div>
           </MenuItem>
           
-          <Link to="/contact" className="text-foreground hover:text-primary font-elegant font-light py-2 px-3 rounded-lg transition-colors">
+          <Link to="/contact" className="text-foreground hover:text-primary font-handwritten font-light py-2 px-3 rounded-lg transition-colors uppercase">
             Contact
           </Link>
         </NavMenu>
@@ -128,7 +128,7 @@ export default function Header() {
                       <div>
                         <Link
                           to={item.href}
-                          className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent"
+                          className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent font-handwritten font-light uppercase"
                           onClick={closeMenu}
                         >
                           {item.name}
@@ -138,7 +138,7 @@ export default function Header() {
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent"
+                              className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent font-handwritten font-light uppercase"
                               onClick={closeMenu}
                             >
                               {subItem.name}
@@ -150,7 +150,7 @@ export default function Header() {
                       <Link
                         to={item.href}
                         className={cn(
-                          "block rounded-lg px-3 py-2 text-base font-medium transition-colors",
+                          "block rounded-lg px-3 py-2 text-base font-medium transition-colors font-handwritten font-light uppercase",
                           location.pathname === item.href
                             ? "text-primary bg-accent"
                             : "text-foreground hover:text-primary hover:bg-accent"

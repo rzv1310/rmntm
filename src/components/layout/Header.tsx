@@ -2,8 +2,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Menu as NavMenu, MenuItem, HoveredLink } from "@/components/ui/navbar-menu";
 
 const navigation = [
   { name: "Acasă", href: "/" },
@@ -27,8 +28,8 @@ const navigation = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -53,7 +54,6 @@ export default function Header() {
 
   const closeMenu = () => {
     setIsOpen(false);
-    setIsServicesOpen(false);
   };
 
   useEffect(() => {
@@ -69,7 +69,50 @@ export default function Header() {
           : "bg-background/95 backdrop-blur-sm"
       )}
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex justify-center pt-4 pb-2">
+        <NavMenu setActive={setActive}>
+          <MenuItem setActive={setActive} active={active} item="Acasă">
+            <div className="flex flex-col space-y-2">
+              <HoveredLink to="/">Pagina principală</HoveredLink>
+            </div>
+          </MenuItem>
+          
+          <MenuItem setActive={setActive} active={active} item="Servicii">
+            <div className="grid grid-cols-2 gap-4 p-2 min-w-[400px]">
+              {navigation.find(item => item.name === "Servicii")?.submenu?.map((service) => (
+                <HoveredLink key={service.href} to={service.href}>
+                  {service.name}
+                </HoveredLink>
+              ))}
+            </div>
+          </MenuItem>
+          
+          <MenuItem setActive={setActive} active={active} item="Prețuri & CAS">
+            <div className="flex flex-col space-y-2">
+              <HoveredLink to="/preturi-rmn">Prețuri RMN</HoveredLink>
+              <HoveredLink to="/rmn-prin-cas">RMN prin CAS</HoveredLink>
+            </div>
+          </MenuItem>
+          
+          <MenuItem setActive={setActive} active={active} item="Contact">
+            <div className="flex flex-col space-y-2">
+              <HoveredLink to="/contact">Informații contact</HoveredLink>
+              <div className="pt-2">
+                <Button asChild variant="medical" size="sm">
+                  <a href="tel:+40256404500" className="flex items-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    Programează-te
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </MenuItem>
+        </NavMenu>
+      </div>
+
+      {/* Mobile Navigation */}
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:hidden">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 focus-ring rounded-lg">
@@ -79,91 +122,22 @@ export default function Header() {
             <span className="text-xl font-bold gradient-text">RMN Timișoara</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.submenu ? (
-                  <div
-                    className="group"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <Link
-                      to={item.href}
-                      className="flex items-center space-x-1 text-sm font-medium text-foreground hover:text-primary transition-colors focus-ring rounded-lg px-3 py-2"
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown className="h-4 w-4" />
-                    </Link>
-                    
-                    {/* Desktop Dropdown */}
-                    <div
-                      className={cn(
-                        "absolute left-0 top-full mt-2 w-64 origin-top-left transform transition-all duration-200",
-                        isServicesOpen
-                          ? "scale-100 opacity-100"
-                          : "scale-95 opacity-0 pointer-events-none"
-                      )}
-                    >
-                      <div className="rounded-lg bg-background shadow-large border border-border p-2">
-                        {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.href}
-                            className="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={cn(
-                      "text-sm font-medium transition-colors focus-ring rounded-lg px-3 py-2",
-                      location.pathname === item.href
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex md:items-center md:space-x-4">
-            <Button asChild variant="medical" size="lg">
-              <a href="tel:+40256404500" className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                Programează-te
-              </a>
-            </Button>
-          </div>
-
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-              className="focus-ring"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            className="focus-ring"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Menu */}
         <div
           className={cn(
-            "fixed inset-0 top-16 z-40 md:hidden transition-transform duration-300",
+            "fixed inset-0 top-16 z-40 transition-transform duration-300",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -174,26 +148,14 @@ export default function Header() {
                   <div key={item.name}>
                     {item.submenu ? (
                       <div>
-                        <button
-                          onClick={() => setIsServicesOpen(!isServicesOpen)}
-                          className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-accent"
+                        <Link
+                          to={item.href}
+                          className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent"
+                          onClick={closeMenu}
                         >
-                          <span>{item.name}</span>
-                          <ChevronDown
-                            className={cn(
-                              "h-4 w-4 transition-transform",
-                              isServicesOpen && "rotate-180"
-                            )}
-                          />
-                        </button>
-                        
-                        {/* Mobile Submenu */}
-                        <div
-                          className={cn(
-                            "mt-2 space-y-2 overflow-hidden transition-all duration-200",
-                            isServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                          )}
-                        >
+                          {item.name}
+                        </Link>
+                        <div className="mt-2 space-y-2">
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}

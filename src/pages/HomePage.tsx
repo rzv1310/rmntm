@@ -155,19 +155,19 @@ export default function HomePage() {
                 RMN Timișoara
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
-                Imagistică de încredere în Timișoara, cu programare și rezultate rapide.
+                Imagistica de încredere în Timișoara, cu programare și rezultate rapide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
                 <GradientButton asChild className="min-w-[200px]">
                   <a href="tel:+40256404500" className="flex items-center gap-2">
                     <Phone className="h-5 w-5" />
-                    Sună acum!
+                    Programează-te acum
                   </a>
                 </GradientButton>
                 <GradientButton asChild variant="variant" className="min-w-[200px]">
                   <Link to="/servicii" className="flex items-center gap-2">
                     <Calendar className="h-5 w-5" />
-                    Vezi investigații
+                    Vezi serviciile
                   </Link>
                 </GradientButton>
               </div>
@@ -181,10 +181,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Servicii RMN Complete în Timișoara
+              Servicii RMN Complete
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              De la investigații cerebrale la evaluări articulare, oferim o gamă completă de examinări RMN 
+              De la investigații cerebrale la evaluări articulare, oferim o gamă completă de servicii RMN 
               cu echipament de ultimă generație și personal medical specializat.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function HomePage() {
           <div className="text-center scroll-reveal">
             <GradientButton asChild variant="variant">
               <Link to="/servicii" className="flex items-center gap-2">
-                Vezi toate examinările
+                Vezi toate serviciile
                 <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
               </Link>
             </GradientButton>
@@ -213,7 +213,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              De ce să alegi clinica noastră RMN?
+              De ce să alegi serviciile noastre?
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Combinăm tehnologia avansată cu experiența medicală pentru a oferi diagnostice precise și rapide.
@@ -256,10 +256,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Întrebările Pacienților
+              Întrebări frecvente
             </h2>
             <p className="text-xl text-muted-foreground">
-              Răspunsuri la cele mai frecvente întrebări despre investigațiile RMN
+              Răspunsuri la cele mai comune întrebări despre investigațiile RMN
             </p>
           </div>
 
@@ -292,10 +292,10 @@ export default function HomePage() {
       <section className="py-20 bg-black">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 scroll-reveal">
-            Gata să îți programezi examinarea RMN?
+            Gata să îți programezi investigația RMN?
           </h2>
           <p className="text-xl text-white/90 mb-8 scroll-reveal">
-            Sună pentru o programare rapidă sau pentru informații suplimentare despre iRM.
+            Contactează-ne pentru o programare rapidă sau pentru informații suplimentare despre serviciile noastre.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
             <GradientButton asChild className="min-w-[200px]">
@@ -306,7 +306,7 @@ export default function HomePage() {
             </GradientButton>
             <GradientButton asChild variant="variant" className="min-w-[200px]">
               <Link to="/contact" className="flex items-center gap-2">
-                Contact
+                Contact complet
                 <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
               </Link>
             </GradientButton>

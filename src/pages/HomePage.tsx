@@ -66,7 +66,7 @@ const services = [
     isDecontCAS: true,
   },
   {
-    title: "RMN Coloană Vertebrală",
+    title: "RMN Coloană",
     description: "Evaluare completă a vertebrelor și țesuturilor moi pentru diagnostic ortopedic avansat.",
     href: "/servicii/rmn-coloana",
     highlights: ["Hernii de disc", "Dureri lombare", "Canal lombar îngust"],

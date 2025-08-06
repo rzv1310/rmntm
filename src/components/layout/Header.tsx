@@ -86,19 +86,9 @@ export default function Header() {
             </div>
           </MenuItem>
           
-          <MenuItem setActive={setActive} active={active} item="Contact">
-            <div className="flex flex-col space-y-2">
-              <HoveredLink to="/contact">Informații contact</HoveredLink>
-              <div className="pt-2">
-                <GradientButton asChild>
-                  <a href="tel:+40256404500" className="flex items-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    Programează-te
-                  </a>
-                </GradientButton>
-              </div>
-            </div>
-          </MenuItem>
+          <Link to="/contact" className="text-foreground hover:text-primary font-medium py-2 px-3 rounded-lg transition-colors">
+            Contact
+          </Link>
         </NavMenu>
       </div>
 

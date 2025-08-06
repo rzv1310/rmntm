@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -75,11 +76,11 @@ export default function Header() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-hero">
               <span className="text-white font-bold text-sm">R</span>
             </div>
-            <span className="text-xl font-bold gradient-text">Ghid RMN</span>
+            <span className="text-xl font-bold gradient-text">RMN Timișoara</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.submenu ? (
@@ -136,7 +137,7 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+          <div className="hidden md:flex md:items-center md:space-x-4">
             <Button asChild variant="medical" size="lg">
               <a href="tel:+40256404500" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
@@ -146,7 +147,7 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -162,7 +163,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div
           className={cn(
-            "fixed inset-0 top-16 z-40 lg:hidden transition-transform duration-300",
+            "fixed inset-0 top-16 z-40 md:hidden transition-transform duration-300",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >

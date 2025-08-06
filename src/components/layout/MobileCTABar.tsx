@@ -1,5 +1,6 @@
+
 import { useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -15,19 +16,19 @@ export default function MobileCTABar() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden mobile-cta-bar">
       <div className="flex p-4 space-x-3">
-        <Button asChild variant="medical" size="lg" className="flex-1">
+        <GradientButton asChild className="flex-1">
           <a href="tel:+40256404500" className="flex items-center justify-center gap-2">
             <Phone className="h-4 w-4" />
             Programează-te
           </a>
-        </Button>
+        </GradientButton>
         
-        <Button asChild variant="outline" size="lg" className="flex-1">
+        <GradientButton asChild variant="variant" className="flex-1">
           <Link to="/preturi-rmn" className="flex items-center justify-center gap-2">
             <DollarSign className="h-4 w-4" />
             Prețuri
           </Link>
-        </Button>
+        </GradientButton>
       </div>
     </div>
   );

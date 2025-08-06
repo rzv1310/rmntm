@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
@@ -26,14 +27,14 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-soft border-t border-border">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Brand Section */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-hero">
                 <span className="text-white font-bold text-sm">R</span>
               </div>
-              <span className="text-xl font-bold gradient-text">Ghid RMN</span>
+              <span className="text-xl font-bold gradient-text">RMN Timișoara</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Platforma ta de încredere pentru informații complete despre serviciile RMN. 
@@ -48,8 +49,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:contact@ghid-rmn.ro" className="hover:text-primary transition-colors">
-                  contact@ghid-rmn.ro
+                <a href="mailto:contact@rmn-timisoara.ro" className="hover:text-primary transition-colors">
+                  contact@rmn-timisoara.ro
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
@@ -63,42 +64,43 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase mb-4">
-              Servicii RMN
-            </h3>
-            <ul className="space-y-3">
-              {footerNavigation.servicii.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Services & Information Combined */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:col-span-1">
+            <div>
+              <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase mb-4">
+                Servicii RMN
+              </h3>
+              <ul className="space-y-3">
+                {footerNavigation.servicii.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Information */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase mb-4">
-              Informații
-            </h3>
-            <ul className="space-y-3">
-              {footerNavigation.informatii.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase mb-4">
+                Informații
+              </h3>
+              <ul className="space-y-3">
+                {footerNavigation.informatii.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Legal */}
@@ -124,7 +126,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-border pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Ghid RMN. Toate drepturile rezervate.
+              © {new Date().getFullYear()} RMN Timișoara. Toate drepturile rezervate.
             </p>
             <p className="text-sm text-muted-foreground">
               Informațiile au caracter orientativ. Consultați medicul specialist.

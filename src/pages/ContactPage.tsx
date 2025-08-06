@@ -1,3 +1,4 @@
+
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
@@ -31,7 +32,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-medium text-foreground">Email</h3>
-                    <a href="mailto:contact@ghid-rmn.ro" className="text-primary">contact@ghid-rmn.ro</a>
+                    <a href="mailto:contact@rmn-timisoara.ro" className="text-primary">contact@rmn-timisoara.ro</a>
                   </div>
                 </div>
               </div>

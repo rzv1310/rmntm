@@ -103,18 +103,18 @@ const services = [
 const advantages = [
   {
     icon: Users,
-    title: "Medici specialiști cu experiență",
-    description: "Interpretare rapidă și corectă de către radiologi cu vastă experiență în imagistică medicală.",
+    title: "Radiologi cu experiență",
+    description: "Interpretare rapidă și corectă de către medici cu vastă expertiză în imagistică medicală.",
   },
   {
     icon: Clock,
     title: "Programări rapide",
-    description: "Sistem de programare eficient adaptat nevoilor dumneavoastră, cu timpi de așteptare reduși.",
+    description: "Timpi de așteptare reduși.",
   },
   {
     icon: Shield,
     title: "Decontare prin CAS",
-    description: "Serviciile RMN sunt decontate prin Casa de Asigurări de Sănătate, în condițiile legii.",
+    description: "RMN cu bilet de trimitere.",
   },
 ];
 

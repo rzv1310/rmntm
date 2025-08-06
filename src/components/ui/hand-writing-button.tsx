@@ -12,24 +12,12 @@ interface HandWrittenButtonProps {
   showArrow?: boolean;
 }
 
-function HandWrittenButton({
+export function HandWrittenButton({
   text,
   href,
   className,
   showArrow = true,
 }: HandWrittenButtonProps) {
-  const draw = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { duration: 2, ease: "easeInOut" },
-        opacity: { duration: 0.5 },
-      },
-    },
-  };
-
   return (
     <div className={cn("relative inline-block group", className)}>
       <div className="absolute inset-0 -inset-4">
@@ -37,8 +25,8 @@ function HandWrittenButton({
           width="100%"
           height="100%"
           viewBox="0 0 400 120"
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="w-full h-full"
         >
@@ -82,5 +70,3 @@ function HandWrittenButton({
     </div>
   );
 }
-
-export { HandWrittenButton };

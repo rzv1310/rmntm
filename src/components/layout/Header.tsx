@@ -119,7 +119,7 @@ export default function Header() {
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="absolute inset-0 bg-background/95 backdrop-blur-md">
+          <div className="absolute inset-0 bg-white">
             <div className="mx-auto max-w-sm p-6">
               <div className="space-y-4">
                 {navigation.map((item) => (

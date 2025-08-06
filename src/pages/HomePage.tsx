@@ -155,7 +155,7 @@ export default function HomePage() {
                 RMN Timișoara
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
-                Imagistica de încredere în Timișoara, cu programare și rezultate rapide.
+                Imagistică de încredere în Timișoara, cu programare și rezultate rapide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
                 <GradientButton asChild className="min-w-[200px]">
@@ -184,7 +184,7 @@ export default function HomePage() {
               Servicii RMN Complete în Timișoara
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              De la investigații cerebrale la evaluări articulare, oferim o gamă completă de servicii RMN 
+              De la investigații cerebrale la evaluări articulare, oferim o gamă completă de examinări RMN 
               cu echipament de ultimă generație și personal medical specializat.
             </p>
           </div>

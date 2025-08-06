@@ -36,7 +36,7 @@ export default function Footer() {
                 alt="RMN Logo" 
                 className="h-8 w-8"
               />
-              <span className="text-lg font-semibold text-foreground tracking-wider uppercase">RMN TIMIȘOARA</span>
+              <h2 className="text-lg font-semibold text-foreground tracking-wider uppercase">RMN TIMIȘOARA</h2>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Platforma ta de încredere pentru informații complete despre serviciile RMN. 

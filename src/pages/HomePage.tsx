@@ -199,10 +199,12 @@ export default function HomePage() {
           </div>
 
           <div className="scroll-reveal">
-            <HandWrittenTitle 
-              title="Vezi toate"
-              subtitle="examinările RMN"
-            />
+            <Link to="/servicii" className="block hover:scale-105 transition-transform duration-200">
+              <HandWrittenTitle 
+                title="Vezi toate"
+                subtitle="examinările RMN"
+              />
+            </Link>
           </div>
         </div>
       </section>

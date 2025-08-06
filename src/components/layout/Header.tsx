@@ -93,7 +93,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:hidden">
-        <div className="flex h-16 items-center">
+        <div className="flex h-16 items-center justify-between">
           {/* Mobile menu button */}
           <GradientButton
             onClick={() => setIsOpen(!isOpen)}
@@ -101,6 +101,13 @@ export default function Header() {
             className="focus-ring p-2"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </GradientButton>
+
+          {/* Phone button */}
+          <GradientButton asChild className="focus-ring p-2">
+            <a href="tel:+40256404500" aria-label="Sună acum">
+              <Phone className="h-6 w-6" />
+            </a>
           </GradientButton>
         </div>
 

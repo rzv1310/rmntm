@@ -281,6 +281,8 @@ export default function HomePage() {
               data={faqs}
               className="max-w-[700px] mx-auto"
               timestamp=""
+              questionClassName="!bg-transparent hover:!bg-transparent !text-black"
+              answerClassName="!bg-black !text-white"
             />
           </div>
         </div>

@@ -183,7 +183,7 @@ export default function HomePage() {
               
               {/* Google Rating */}
               <div className="mt-8 flex items-center justify-center gap-2 animate-fade-in-up">
-                <span className="text-white/90 text-lg font-medium">5,0</span>
+                <span className="text-white/90 text-lg font-medium">Google 5.0</span>
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <motion.svg

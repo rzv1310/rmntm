@@ -148,59 +148,22 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+        <div className="relative min-h-[600px] flex items-center bg-neutral-950">
           <div className="absolute inset-0">
             <FloatingPaths position={1} />
             <FloatingPaths position={-1} />
           </div>
-
-          <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 2 }}
-              className="max-w-4xl mx-auto"
-            >
-              <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <motion.span
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2, type: "spring", stiffness: 150, damping: 25 }}
-                  className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80"
-                >
-                  Ghid RMN – 
-                </motion.span>
-                <motion.span 
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.4, type: "spring", stiffness: 150, damping: 25 }}
-                  className="block text-transparent bg-clip-text bg-gradient-to-r from-neutral-700/80 to-neutral-600/80 dark:from-white/80 dark:to-white/60"
-                >
-                  Investigații de încredere
-                </motion.span>
-              </motion.h1>
-              
-              <motion.p 
-                className="text-xl md:text-2xl mb-8 text-neutral-600 dark:text-white/90 max-w-3xl mx-auto leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-              >
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+                Ghid RMN – 
+                <span className="block text-white/90">Investigații de încredere</span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
                 Platforma ta completă pentru informații despre serviciile RMN. 
                 Găsește investigația potrivită și programează-te rapid la clinicile de încredere.
-              </motion.p>
-              
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-              >
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
                 <GradientButton asChild className="min-w-[200px]">
                   <a href="tel:+40256404500" className="flex items-center gap-2">
                     <Phone className="h-5 w-5" />
@@ -213,8 +176,8 @@ export default function HomePage() {
                     Vezi serviciile
                   </Link>
                 </GradientButton>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -4,15 +4,17 @@ import { cn } from "@/lib/utils";
 interface AnimatedCardProps {
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function AnimatedCard({ children, className }: AnimatedCardProps) {
+export function AnimatedCard({ children, className, style }: AnimatedCardProps) {
   return (
     <div className={cn(
       "relative w-full h-64 rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center",
       className
     )} style={{
-      boxShadow: "20px 20px 60px #bebebe, -20px -20px 60px #ffffff"
+      boxShadow: "20px 20px 60px #bebebe, -20px -20px 60px #ffffff",
+      ...style
     }}>
       {/* Background with blur effect */}
       <div className="absolute top-1 left-1 right-1 bottom-1 z-20 rounded-lg overflow-hidden border-2 border-white" 

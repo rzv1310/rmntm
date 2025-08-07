@@ -48,7 +48,7 @@ export default function ServiceLinks({
         </Link>
         <Link
           to="/preturi-rmn"
-          className="flex items-center justify-between p-3 rounded-lg bg-accent text-accent-foreground hover:bg-accent/80 transition-colors group focus-ring"
+          className="flex items-center justify-between p-3 rounded-lg bg-muted text-muted-foreground hover:bg-muted/80 transition-colors group focus-ring"
         >
           <span className="text-sm font-medium">Vezi prețurile</span>
           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

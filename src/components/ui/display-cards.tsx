@@ -62,7 +62,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
 
   return (
     <div className="relative w-full flex justify-center overflow-hidden py-20">
-      <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700 relative"
+      <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700 relative -translate-x-2 md:translate-x-0"
            style={{ 
              minWidth: 'min(500px, 90vw)',
              minHeight: '300px',

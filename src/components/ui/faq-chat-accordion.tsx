@@ -64,15 +64,19 @@ export function FaqAccordion({
                     <span
                       className={cn(
                         "absolute bottom-6",
-                        item.iconPosition === "right" ? "right-0" : "left-0"
+                        item.iconPosition === "right" ? "right-0 translate-x-4 -translate-y-1" : "left-0"
                       )}
                       style={{
                         transform: item.iconPosition === "right" 
-                          ? "rotate(7deg)" 
+                          ? "rotate(7deg) translateX(15px) translateY(-5px)" 
                           : "rotate(-4deg)",
                       }}
                     >
-                      {item.icon}
+                      {typeof item.icon === 'string' ? (
+                        item.icon
+                      ) : (
+                        <span className="text-gray-500">{item.icon}</span>
+                      )}
                     </span>
                   )}
                   <span className="font-medium">{item.question}</span>

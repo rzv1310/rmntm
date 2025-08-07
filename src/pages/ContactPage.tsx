@@ -22,17 +22,17 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Phone className="h-6 w-6 text-primary mt-1" />
+                  <Phone className="h-6 w-6 text-red-500 mt-1" />
                   <div>
                     <h3 className="font-medium text-foreground">Telefon</h3>
-                    <a href="tel:+40256404500" className="text-xl text-primary font-medium">0256 404 500</a>
+                    <a href="tel:+40256404500" className="text-xl text-red-500 font-medium">0256 404 500</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="h-6 w-6 text-primary mt-1" />
+                  <Mail className="h-6 w-6 text-red-500 mt-1" />
                   <div>
                     <h3 className="font-medium text-foreground">Email</h3>
-                    <a href="mailto:contact@rmn-timisoara.ro" className="text-primary">contact@rmn-timisoara.ro</a>
+                    <a href="mailto:contact@rmn-timisoara.ro" className="text-red-500">contact@rmn-timisoara.ro</a>
                   </div>
                 </div>
               </div>

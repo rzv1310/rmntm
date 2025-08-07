@@ -5,7 +5,7 @@ import { Phone, FileText, CheckCircle } from "lucide-react";
 
 export default function RMNPrinCASPage() {
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen pt-20 md:pt-32 pb-8">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <CustomBreadcrumb items={[{ label: "RMN prin CAS" }]} />

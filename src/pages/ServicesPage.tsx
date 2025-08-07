@@ -58,7 +58,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen pt-20 md:pt-32 pb-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="mb-8">

@@ -60,7 +60,7 @@ export default function RMNCerebralPage() {
 
         {/* Introduction */}
         <section className="mt-5 mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <AnimatedCard>
+          <AnimatedCard className="mt-5">
             <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">Introducere</h2>
             <p className="text-muted-foreground leading-relaxed text-center">
               RMN-ul cerebral este o investigație imagistică non-invazivă, critică pentru evaluarea detaliată 

@@ -343,13 +343,13 @@ export default function HomePage() {
             Sună pentru o programare rapidă sau pentru informații suplimentare despre iRM.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
-            <GradientButton asChild className="min-w-[200px]">
-              <a href="tel:+40256404500" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
+            <GradientButton asChild variant="white" className="min-w-[200px]">
+              <a href="tel:+40256404500" className="flex items-center gap-2 text-black">
+                <Phone className="h-5 w-5 text-black" />
                 0256 404 500
               </a>
             </GradientButton>
-            <GradientButton asChild variant="variant" className="min-w-[200px]">
+            <GradientButton asChild className="min-w-[200px]">
               <Link to="/contact" className="flex items-center gap-2">
                 Contact
                 <ChevronDown className="h-4 w-4 rotate-[-90deg]" />

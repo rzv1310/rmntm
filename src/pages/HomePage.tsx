@@ -154,8 +154,8 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="relative min-h-[600px] flex flex-col justify-center bg-black">
-          <div className="absolute inset-0">
+        <div className="relative min-h-[600px] flex flex-col justify-center bg-black overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
             <SpiralAnimation />
           </div>
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
@@ -267,7 +267,7 @@ export default function HomePage() {
       </section>
 
       {/* Advantages Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -278,7 +278,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center overflow-hidden">
             <DisplayCards cards={[
               {
                 icon: <Users className="size-4 text-white" />,
@@ -294,7 +294,7 @@ export default function HomePage() {
                 description: "Timpi de așteptare reduși.",
                 date: "",
                 titleClassName: "text-black",
-                className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                className: "[grid-area:stack] translate-x-8 md:translate-x-16 translate-y-5 md:translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
               },
               {
                 icon: <Shield className="size-4 text-white" />,
@@ -302,7 +302,7 @@ export default function HomePage() {
                 description: "RMN cu bilet de trimitere.",
                 date: "",
                 titleClassName: "text-black",
-                className: "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
+                className: "[grid-area:stack] translate-x-16 md:translate-x-32 translate-y-10 md:translate-y-20 hover:translate-y-5 md:hover:translate-y-10",
               },
             ]} />
           </div>

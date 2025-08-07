@@ -392,6 +392,18 @@ export function SpiralAnimation() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const animationRef = useRef<AnimationController | null>(null)
     const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight })
+    const [isMobile, setIsMobile] = useState(false)
+    
+    // 检测移动设备
+    useEffect(() => {
+        const checkIsMobile = () => {
+            setIsMobile(window.innerWidth <= 768)
+        }
+        
+        checkIsMobile()
+        window.addEventListener('resize', checkIsMobile)
+        return () => window.removeEventListener('resize', checkIsMobile)
+    }, [])
     
     // 处理窗口大小变化
     useEffect(() => {
@@ -417,8 +429,8 @@ export function SpiralAnimation() {
         
         // 处理DPR以解决模糊问题
         const dpr = window.devicePixelRatio || 1
-        // 使用全屏尺寸
-        const size = Math.max(dimensions.width, dimensions.height)
+        // 使用全屏尺寸，但在移动设备上限制大小
+        const size = isMobile ? Math.min(dimensions.width, dimensions.height) : Math.max(dimensions.width, dimensions.height)
         
         canvas.width = size * dpr
         canvas.height = size * dpr
@@ -430,8 +442,19 @@ export function SpiralAnimation() {
         // 缩放上下文以适应DPR
         ctx.scale(dpr, dpr)
         
-        // 创建动画控制器
+        // 创建动画控制器，在移动设备上使用简化版本
         animationRef.current = new AnimationController(canvas, ctx, dpr, size)
+        
+        // 在移动设备上暂停动画以避免性能问题
+        if (isMobile && animationRef.current) {
+            // 减少更新频率
+            animationRef.current.pause()
+            setTimeout(() => {
+                if (animationRef.current) {
+                    animationRef.current.resume()
+                }
+            }, 1000)
+        }
         
         return () => {
             // 清理动画
@@ -440,13 +463,17 @@ export function SpiralAnimation() {
                 animationRef.current = null
             }
         }
-    }, [dimensions])
+    }, [dimensions, isMobile])
     
     return (
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full overflow-hidden">
             <canvas
                 ref={canvasRef}
                 className="absolute inset-0 w-full h-full"
+                style={{
+                    transform: 'translate3d(0,0,0)',
+                    willChange: isMobile ? 'auto' : 'transform'
+                }}
             />
         </div>
     )

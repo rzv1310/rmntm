@@ -182,7 +182,7 @@ export default function RMNMamarPage() {
                 </a>
               </GradientButton>
               <GradientButton asChild variant="variant">
-                <a href="/contact">Contact complet</a>
+                <a href="/contact">Programare online</a>
               </GradientButton>
             </div>
           </div>

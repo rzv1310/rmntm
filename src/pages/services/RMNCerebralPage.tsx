@@ -1,6 +1,7 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { GradientButton } from "@/components/ui/gradient-button";
+import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 
 const indicatii = [
@@ -68,13 +69,30 @@ export default function RMNCerebralPage() {
         {/* Indicații */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Cerebral</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {indicatii.map((indicatie, index) => (
-              <div key={index} className="flex items-start gap-3 medical-card p-4 rounded-lg">
-                <AlertCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{indicatie}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Afecțiuni neurologice</h3>
+              <div className="space-y-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Diagnostic și urmărire</h3>
+              <div className="space-y-3">
+                {indicatii.slice(4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimatedCard>
           </div>
         </section>
 

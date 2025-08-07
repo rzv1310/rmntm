@@ -21,6 +21,9 @@ export default {
 			fontFamily: {
 				'elegant': ['Inter', 'sans-serif'],
 				'handwritten': ['Kalam', 'cursive'],
+				'kalam': ['Kalam', 'cursive'],
+				'caveat': ['Caveat', 'cursive'],
+				'handlee': ['Handlee', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

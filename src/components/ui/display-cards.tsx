@@ -61,11 +61,11 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
   const displayCards = cards || defaultCards;
 
   return (
-    <div className="relative w-full flex justify-center overflow-hidden">
+    <div className="relative w-full flex justify-center overflow-hidden py-12">
       <div className="grid [grid-template-areas:'stack'] opacity-100 animate-in fade-in-0 duration-700 relative w-fit"
            style={{ 
              minWidth: 'min(420px, 90vw)',
-             minHeight: '200px'
+             minHeight: '240px'
            }}>
         {displayCards.map((cardProps, index) => (
           <DisplayCard key={index} {...cardProps} />

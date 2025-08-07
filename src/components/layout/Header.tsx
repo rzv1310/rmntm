@@ -121,9 +121,9 @@ export default function Header() {
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="absolute inset-0 bg-white">
-            <div className="mx-auto max-w-sm p-6">
-              <div className="space-y-4">
+          <div className="absolute inset-0 bg-white overflow-y-auto">
+            <div className="mx-auto max-w-sm p-6 min-h-full">
+              <div className="space-y-4 pb-20">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.submenu ? (

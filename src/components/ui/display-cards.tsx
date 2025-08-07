@@ -51,21 +51,21 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
       className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
     },
     {
-      className: "[grid-area:stack] translate-x-4 md:translate-x-16 translate-y-12 md:translate-y-16 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+      className: "[grid-area:stack] translate-x-4 md:translate-x-16 translate-y-[4.25rem] md:translate-y-[5.25rem] hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
     },
     {
-      className: "[grid-area:stack] translate-x-8 md:translate-x-32 translate-y-24 md:translate-y-32 hover:translate-y-5 md:hover:translate-y-10",
+      className: "[grid-area:stack] translate-x-8 md:translate-x-32 translate-y-[7.25rem] md:translate-y-[9.25rem] hover:translate-y-5 md:hover:translate-y-10",
     },
   ];
 
   const displayCards = cards || defaultCards;
 
   return (
-    <div className="relative w-full flex justify-center overflow-hidden py-16">
+    <div className="relative w-full flex justify-center overflow-hidden py-20">
       <div className="grid [grid-template-areas:'stack'] opacity-100 animate-in fade-in-0 duration-700 relative w-fit"
            style={{ 
              minWidth: 'min(380px, 90vw)',
-             minHeight: '280px'
+             minHeight: '320px'
            }}>
         {displayCards.map((cardProps, index) => (
           <DisplayCard key={index} {...cardProps} />

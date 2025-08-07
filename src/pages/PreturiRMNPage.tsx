@@ -66,7 +66,7 @@ export default function PreturiRMNPage() {
         </section>
 
         <section className="scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Pentru informații exacte</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru prețuri actualizate și detalii despre decontare.</p>
             <GradientButton asChild>

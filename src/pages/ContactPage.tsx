@@ -57,7 +57,7 @@ export default function ContactPage() {
         </section>
 
         <section className="scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te acum</h2>
             <p className="text-white/90 mb-6">Suntem aici să te ajutăm cu orice întrebare.</p>
             <GradientButton asChild>

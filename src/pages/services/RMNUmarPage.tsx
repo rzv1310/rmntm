@@ -24,7 +24,7 @@ export default function RMNUmarPage() {
         </div>
 
         <section className="mb-12 scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Umăr</h2>
             <GradientButton asChild>
               <a href="tel:+40256404500" className="flex items-center gap-2">

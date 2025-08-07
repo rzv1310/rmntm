@@ -119,7 +119,7 @@ export default function RMNCerebralPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {avantaje.map((avantaj, index) => (
               <div key={index} className="flex items-start gap-3 medical-card p-4 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">{avantaj}</span>
               </div>
             ))}
@@ -151,7 +151,7 @@ export default function RMNCerebralPage() {
 
         {/* CTA */}
         <section className="mb-12 scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Cerebral</h2>
             <p className="text-white/90 mb-6">
               Contactează-ne pentru o programare rapidă sau pentru informații suplimentare.

@@ -133,7 +133,7 @@ export default function RMNArticulatiiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {structuriEvaluate.map((structura, index) => (
               <div key={index} className="flex items-start gap-3 bg-gradient-soft p-4 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">{structura}</span>
               </div>
             ))}
@@ -147,23 +147,23 @@ export default function RMNArticulatiiPage() {
               <h3 className="text-xl font-semibold text-foreground mb-4">Avantaje RMN Articular</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
                   <span>Non-invaziv și fără radiații</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
                   <span>Detalii anatomice de înaltă rezoluție</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
                   <span>Evaluare completă a articulației</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
                   <span>Diagnostic diferențial precis</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
                   <span>Planificarea tratamentului optim</span>
                 </li>
               </ul>
@@ -245,7 +245,7 @@ export default function RMNArticulatiiPage() {
 
         {/* CTA */}
         <section className="mb-12 scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Articulații</h2>
             <p className="text-white/90 mb-6">
               Obține un diagnostic precis pentru problemele articulare și începe tratamentul optim.

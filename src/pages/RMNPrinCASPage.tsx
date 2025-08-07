@@ -27,7 +27,7 @@ export default function RMNPrinCASPage() {
                 "Respectarea circuitului medical"
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-success mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-foreground mt-0.5" />
                   <span className="text-muted-foreground">{item}</span>
                 </div>
               ))}
@@ -65,7 +65,7 @@ export default function RMNPrinCASPage() {
         </section>
 
         <section className="scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programare prin CAS</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru informații despre programarea cu decontare CAS.</p>
             <GradientButton asChild>

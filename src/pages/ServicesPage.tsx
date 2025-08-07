@@ -86,7 +86,7 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-center text-white scroll-reveal">
+        <div className="bg-black rounded-2xl p-8 md:p-12 text-center text-white scroll-reveal">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ai nevoie de o programare rapidă?
           </h2>

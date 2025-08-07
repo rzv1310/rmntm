@@ -32,7 +32,7 @@ export default function RMNAbdominalPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {["Patologii hepatice", "Afecțiuni biliare", "Patologii pancreatice", "Afecțiuni renale", "Tumori abdominale", "Evaluarea splinei"].map((item, index) => (
                 <div key={index} className="flex items-start gap-3 p-3 bg-gradient-soft rounded-lg">
-                  <CheckCircle className="h-4 w-4 text-success mt-0.5" />
+                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5" />
                   <span className="text-muted-foreground text-sm">{item}</span>
                 </div>
               ))}
@@ -59,7 +59,7 @@ export default function RMNAbdominalPage() {
         </section>
 
         <section className="mb-12 scroll-reveal">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center text-white">
+          <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Abdominal</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru programare și informații detaliate.</p>
             <GradientButton asChild>

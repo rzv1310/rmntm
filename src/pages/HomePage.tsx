@@ -166,18 +166,12 @@ export default function HomePage() {
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
                 Imagistică de încredere în Timișoara, cu programare și rezultate rapide.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
+              <div className="flex justify-center animate-fade-in-up">
                 <GradientButton asChild variant="white" className="min-w-[200px]">
                   <a href="tel:+40256404500" className="flex items-center gap-2 text-black">
                     <Phone className="h-5 w-5 text-black" />
                     Sună acum!
                   </a>
-                </GradientButton>
-                <GradientButton asChild className="min-w-[200px]">
-                  <Link to="/preturi-rmn" className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5" />
-                    Prețuri RMN
-                  </Link>
                 </GradientButton>
               </div>
             </div>
@@ -239,10 +233,18 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Servicii RMN Complete în Timișoara
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               De la investigații cerebrale la evaluări articulare, oferim o gamă completă de examinări RMN 
               cu echipament de ultimă generație și personal medical specializat.
             </p>
+            <div className="flex justify-center">
+              <GradientButton asChild className="min-w-[200px]">
+                <Link to="/preturi-rmn" className="flex items-center gap-2">
+                  <Calendar className="h-5 w-5" />
+                  Prețuri RMN
+                </Link>
+              </GradientButton>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
@@ -125,7 +124,7 @@ const faqs = [
   {
     id: 1,
     question: "Ce este RMN?",
-    answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și onde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
+    answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și unde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
     icon: "🧠",
     iconPosition: "right" as const,
   },
@@ -286,7 +285,7 @@ export default function HomePage() {
                 description: "Interpretare rapidă și corectă.",
                 date: "",
                 titleClassName: "text-black",
-                className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                className: "[grid-area:stack] hover:-translate-y-10 transition-all duration-300 ease-out before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
               },
               {
                 icon: <Clock className="size-4 text-white" />,
@@ -294,7 +293,7 @@ export default function HomePage() {
                 description: "Timpi de așteptare reduși.",
                 date: "",
                 titleClassName: "text-black",
-                className: "[grid-area:stack] translate-x-8 md:translate-x-16 translate-y-5 md:translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                className: "[grid-area:stack] translate-x-8 md:translate-x-16 translate-y-5 md:translate-y-10 hover:-translate-y-10 transition-all duration-300 ease-out before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
               },
               {
                 icon: <Shield className="size-4 text-white" />,
@@ -302,7 +301,7 @@ export default function HomePage() {
                 description: "RMN cu bilet de trimitere.",
                 date: "",
                 titleClassName: "text-black",
-                className: "[grid-area:stack] translate-x-16 md:translate-x-32 translate-y-10 md:translate-y-20 hover:translate-y-5 md:hover:translate-y-10",
+                className: "[grid-area:stack] translate-x-16 md:translate-x-32 translate-y-10 md:translate-y-20 hover:-translate-y-10 transition-all duration-300 ease-out",
               },
             ]} />
           </div>

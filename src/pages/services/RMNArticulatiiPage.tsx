@@ -186,7 +186,7 @@ export default function RMNArticulatiiPage() {
                   0256 404 500
                 </a>
               </GradientButton>
-              <GradientButton asChild variant="variant">
+              <GradientButton asChild>
                 <a href="/contact">Programare online</a>
               </GradientButton>
             </div>

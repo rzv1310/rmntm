@@ -3,6 +3,7 @@ import ServiceLinks from "@/components/ServiceLinks";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
+import { AnimatedPhoneButton } from "@/components/ui/animated-phone-button";
 
 const indicatii = [
   "Afecțiuni ginecologice (fibroame, chisturi)",
@@ -53,6 +54,9 @@ export default function RMNPelvinPage() {
             diagnosticarea precisă a afecțiunilor organelor pelvine.
           </p>
         </div>
+
+        {/* Phone Button */}
+        <AnimatedPhoneButton />
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>

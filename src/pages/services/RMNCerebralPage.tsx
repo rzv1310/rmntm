@@ -159,7 +159,7 @@ export default function RMNCerebralPage() {
             
             <AnimatedCard>
               <h3 className="text-lg font-medium text-foreground mb-3 text-center">Preț orientativ</h3>
-              <p className="text-2xl font-bold text-primary mb-2 text-center">835,00 lei</p>
+              <p className="text-2xl font-bold text-red-500 mb-2 text-center">835,00 lei</p>
               <p className="text-sm text-muted-foreground text-center">
                 *Preț pentru RMN cerebral nativ. Cu substanță de contrast: +100-150 lei
               </p>

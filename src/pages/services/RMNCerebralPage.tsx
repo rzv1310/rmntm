@@ -69,7 +69,7 @@ export default function RMNCerebralPage() {
         {/* Indicații */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Cerebral</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Afecțiuni neurologice</h3>
               <div className="space-y-3">

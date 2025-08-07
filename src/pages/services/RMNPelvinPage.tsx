@@ -16,7 +16,7 @@ export default function RMNPelvinPage() {
           />
         </div>
 
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">RMN Pelvin</h1>
             <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">Decontat CAS</GradientButton>
@@ -26,7 +26,7 @@ export default function RMNPelvinPage() {
           </p>
         </div>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Pelvin</h2>
             <GradientButton asChild>

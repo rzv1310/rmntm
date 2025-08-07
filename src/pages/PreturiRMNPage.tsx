@@ -19,12 +19,12 @@ export default function PreturiRMNPage() {
           <CustomBreadcrumb items={[{ label: "Prețuri RMN" }]} />
         </div>
 
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Prețuri RMN</h1>
           <p className="text-xl text-muted-foreground">Transparență și accesibilitate în serviciile noastre.</p>
         </div>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Listă tarife orientative</h2>
           <div className="medical-card rounded-xl overflow-hidden">
             <div className="overflow-x-auto">
@@ -48,7 +48,7 @@ export default function PreturiRMNPage() {
           </div>
         </section>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
             <div className="flex items-start gap-3">
               <Info className="h-6 w-6 text-amber-600 mt-0.5" />
@@ -65,7 +65,7 @@ export default function PreturiRMNPage() {
           </div>
         </section>
 
-        <section className="scroll-reveal">
+        <section className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Pentru informații exacte</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru prețuri actualizate și detalii despre decontare.</p>

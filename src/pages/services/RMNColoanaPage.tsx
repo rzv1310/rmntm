@@ -57,7 +57,7 @@ export default function RMNColoanaPage() {
         </div>
 
         {/* Header */}
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Coloană Vertebrală
@@ -73,7 +73,7 @@ export default function RMNColoanaPage() {
         </div>
 
         {/* Introduction */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Introducere</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -86,7 +86,7 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* Indicații pe segmente */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pe segmente</h2>
           <div className="space-y-6">
             {segmente.map((segment, index) => (
@@ -106,7 +106,7 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* Avantaje */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Avantajele RMN Coloană</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {avantaje.map((avantaj, index) => (
@@ -119,7 +119,7 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* Ce detectează */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <div className="bg-gradient-soft rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-6">Ce detectează RMN-ul coloanei?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -150,7 +150,7 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* Pregătire și durată */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Pregătire și durată</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -177,7 +177,7 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* Preț informativ */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-accent/10 border border-accent/20 rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Informații despre preț și decontare</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -200,7 +200,7 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Coloană Vertebrală</h2>
             <p className="text-white/90 mb-6">

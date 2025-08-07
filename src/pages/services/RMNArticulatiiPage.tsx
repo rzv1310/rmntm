@@ -67,7 +67,7 @@ export default function RMNArticulatiiPage() {
         </div>
 
         {/* Header */}
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Articulații
@@ -83,7 +83,7 @@ export default function RMNArticulatiiPage() {
         </div>
 
         {/* Introduction */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Introducere</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -99,7 +99,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* Indicații */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Articulații</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {indicatii.map((indicatie, index) => (
@@ -112,7 +112,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* Articulații principale */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Articulații principale evaluate</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {articulatiiPrincipale.map((articulatie, index) => (
@@ -125,7 +125,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* Ce detectează */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
             <Eye className="inline h-6 w-6 mr-2 text-primary" />
             Ce detectează RMN-ul articular?
@@ -141,7 +141,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* Avantaje și proces */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="medical-card p-6 rounded-xl">
               <h3 className="text-xl font-semibold text-foreground mb-4">Avantaje RMN Articular</h3>
@@ -184,7 +184,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* Pregătire și informații practice */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-gradient-soft rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătire și informații practice</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -220,7 +220,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* Informații despre preț */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Informații despre preț și decontare</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -244,7 +244,7 @@ export default function RMNArticulatiiPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Articulații</h2>
             <p className="text-white/90 mb-6">

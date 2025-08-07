@@ -11,12 +11,12 @@ export default function RMNPrinCASPage() {
           <CustomBreadcrumb items={[{ label: "RMN prin CAS" }]} />
         </div>
 
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">RMN Decontat prin CAS</h1>
           <p className="text-xl text-muted-foreground">Ghid complet pentru decontarea investigațiilor RMN prin Casa de Asigurări de Sănătate.</p>
         </div>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Condiții pentru decontare</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -35,7 +35,7 @@ export default function RMNPrinCASPage() {
           </div>
         </section>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <div className="bg-gradient-soft rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-4">
               <FileText className="inline h-6 w-6 mr-2" />
@@ -64,7 +64,7 @@ export default function RMNPrinCASPage() {
           </div>
         </section>
 
-        <section className="scroll-reveal">
+        <section className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programare prin CAS</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru informații despre programarea cu decontare CAS.</p>

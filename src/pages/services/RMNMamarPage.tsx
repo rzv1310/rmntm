@@ -51,7 +51,7 @@ export default function RMNMamarPage() {
         </div>
 
         {/* Header */}
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Mamar
@@ -67,7 +67,7 @@ export default function RMNMamarPage() {
         </div>
 
         {/* Introduction */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-6 rounded-xl">
             <div className="flex items-center gap-3 mb-4">
               <Heart className="h-6 w-6 text-primary" />
@@ -87,7 +87,7 @@ export default function RMNMamarPage() {
         </section>
 
         {/* Indicații */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Mamar</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {indicatii.map((indicatie, index) => (
@@ -100,7 +100,7 @@ export default function RMNMamarPage() {
         </section>
 
         {/* Ce detectează */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
             <Eye className="inline h-6 w-6 mr-2 text-primary" />
             Ce evaluează RMN-ul mamar?
@@ -116,7 +116,7 @@ export default function RMNMamarPage() {
         </section>
 
         {/* Avantaje și proces */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="medical-card p-6 rounded-xl">
               <h3 className="text-xl font-semibold text-foreground mb-4">Avantaje RMN Mamar</h3>
@@ -145,7 +145,7 @@ export default function RMNMamarPage() {
         </section>
 
         {/* Pregătire și informații practice */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <div className="bg-gradient-soft rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătire și informații practice</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -183,7 +183,7 @@ export default function RMNMamarPage() {
         </section>
 
         {/* Informații despre preț */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Informații despre preț și decontare</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -207,7 +207,7 @@ export default function RMNMamarPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Mamar</h2>
             <p className="text-white/90 mb-6">

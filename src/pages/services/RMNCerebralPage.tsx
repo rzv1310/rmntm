@@ -38,7 +38,7 @@ export default function RMNCerebralPage() {
         </div>
 
         {/* Header */}
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Cerebral
@@ -54,7 +54,7 @@ export default function RMNCerebralPage() {
         </div>
 
         {/* Introduction */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Introducere</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -66,7 +66,7 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* Indicații */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Cerebral</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {indicatii.map((indicatie, index) => (
@@ -79,7 +79,7 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* Pregătire */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
           <div className="bg-gradient-soft rounded-xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -112,7 +112,7 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* Avantaje */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
             Avantajele RMN Cerebral la Clinica Imagistică Avansată
           </h2>
@@ -127,7 +127,7 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* Preț și decontare */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Preț și decontare</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -150,7 +150,7 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Cerebral</h2>
             <p className="text-white/90 mb-6">

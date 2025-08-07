@@ -16,7 +16,7 @@ export default function RMNAbdominalPage() {
           />
         </div>
 
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">RMN Abdominal</h1>
             <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">Decontat CAS</GradientButton>
@@ -26,7 +26,7 @@ export default function RMNAbdominalPage() {
           </p>
         </div>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-6 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Indicații</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -40,7 +40,7 @@ export default function RMNAbdominalPage() {
           </div>
         </section>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <div className="bg-gradient-soft rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Pregătire</h2>
             <div className="flex items-start gap-3 mb-3">
@@ -58,7 +58,7 @@ export default function RMNAbdominalPage() {
           </div>
         </section>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează RMN Abdominal</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru programare și informații detaliate.</p>

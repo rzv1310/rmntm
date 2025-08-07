@@ -66,7 +66,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Header */}
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Servicii RMN Complete
           </h1>
@@ -78,15 +78,15 @@ export default function ServicesPage() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => (
-            <div key={service.href} className="scroll-reveal">
+          {services.map((service, index) => (
+            <div key={service.href} className="animate-fade-in-up" style={{animationDelay: `${0.1 + index * 0.1}s`}}>
               <ServiceCard {...service} />
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="bg-black rounded-2xl p-8 md:p-12 text-center text-white scroll-reveal">
+        <div className="bg-black rounded-2xl p-8 md:p-12 text-center text-white animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ai nevoie de o programare rapidă?
           </h2>
@@ -107,7 +107,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Information Section */}
-        <div className="mt-16 text-center scroll-reveal">
+        <div className="mt-16 text-center animate-fade-in-up" style={{animationDelay: '0.8s'}}>
           <div className="bg-gradient-soft rounded-xl p-8">
             <h3 className="text-xl font-semibold text-foreground mb-4">
               Informații importante

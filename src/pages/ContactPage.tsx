@@ -11,12 +11,12 @@ export default function ContactPage() {
           <CustomBreadcrumb items={[{ label: "Contact" }]} />
         </div>
 
-        <div className="mb-12 scroll-reveal">
+        <div className="mb-12 animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Contact</h1>
           <p className="text-xl text-muted-foreground">Contactează-ne pentru programări și informații.</p>
         </div>
 
-        <section className="mb-12 scroll-reveal">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="medical-card p-8 rounded-xl">
             <h2 className="text-2xl font-semibold text-foreground mb-6">Informații de contact</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -56,7 +56,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="scroll-reveal">
+        <section className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te acum</h2>
             <p className="text-white/90 mb-6">Suntem aici să te ajutăm cu orice întrebare.</p>

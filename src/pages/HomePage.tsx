@@ -173,7 +173,7 @@ export default function HomePage() {
                     Sună acum!
                   </a>
                 </GradientButton>
-                <GradientButton asChild variant="variant" className="min-w-[200px]">
+                <GradientButton asChild className="min-w-[200px]">
                   <Link to="/preturi-rmn" className="flex items-center gap-2">
                     <Calendar className="h-5 w-5" />
                     Prețuri RMN

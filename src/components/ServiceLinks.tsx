@@ -40,15 +40,6 @@ export default function ServiceLinks({
           </Link>
         ))}
       </div>
-      <div className="flex justify-center">
-        <Link
-          to="/contact"
-          className="flex items-center justify-between p-3 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-colors group focus-ring px-6"
-        >
-          <span className="text-sm font-medium">Contact & Programări</span>
-          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform ml-2" />
-        </Link>
-      </div>
     </div>
   );
 }

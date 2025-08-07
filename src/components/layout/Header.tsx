@@ -71,7 +71,7 @@ export default function Header() {
             <img 
               src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" 
               alt="RMN Doctor Guide Logo" 
-              className="h-8 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
           

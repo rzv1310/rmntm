@@ -56,7 +56,9 @@ export default function RMNColoanaPage() {
         </div>
 
         {/* Phone Button */}
-        <AnimatedPhoneButton />
+        <div className="mb-5">
+          <AnimatedPhoneButton />
+        </div>
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>

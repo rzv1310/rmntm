@@ -125,7 +125,7 @@ const faqs = [
     id: 1,
     question: "Ce este RMN?",
     answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și unde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
-    icon: <Magnet className="w-6 h-6 text-gray-500" style={{ marginLeft: '15px' }} />,
+    icon: <Magnet className="w-6 h-6 text-gray-500" style={{ marginLeft: '15px', marginTop: '-5px' }} />,
     iconPosition: "right" as const,
   },
   {

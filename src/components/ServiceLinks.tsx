@@ -33,7 +33,7 @@ export default function ServiceLinks({
           <Link
             key={service.href}
             to={service.href}
-            className="flex items-center justify-between p-3 rounded-lg bg-background hover:bg-accent transition-colors group focus-ring"
+            className="flex items-center justify-between p-3 rounded-lg bg-background hover:bg-muted/50 transition-colors group focus-ring"
           >
             <span className="text-sm font-medium text-foreground">{service.title}</span>
             <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />

@@ -12,7 +12,7 @@ export default function RMNPrinCASPage() {
         </div>
 
         <div className="mb-12 animate-fade-in-up">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">RMN Decontat prin CAS</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">RMN Timisoara cu bilet de trimitere</h1>
           <p className="text-xl text-muted-foreground">Ghid complet pentru decontarea investigațiilor RMN prin Casa de Asigurări de Sănătate.</p>
         </div>
 
@@ -27,7 +27,7 @@ export default function RMNPrinCASPage() {
                 "Respectarea circuitului medical"
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-foreground mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-0.5" />
                   <span className="text-muted-foreground">{item}</span>
                 </div>
               ))}
@@ -38,7 +38,7 @@ export default function RMNPrinCASPage() {
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <div className="bg-gradient-soft rounded-xl p-6">
             <h2 className="text-2xl font-semibold text-foreground mb-4">
-              <FileText className="inline h-6 w-6 mr-2" />
+              <FileText className="inline h-6 w-6 mr-2 text-red-500" />
               Documente necesare
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

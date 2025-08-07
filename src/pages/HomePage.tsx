@@ -163,7 +163,7 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
                 RMN Timișoara
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
+              <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
                 Imagistică de încredere în Timișoara, cu programare și rezultate rapide.
               </p>
               <div className="flex justify-center animate-fade-in-up">

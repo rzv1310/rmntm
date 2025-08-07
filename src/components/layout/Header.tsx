@@ -67,8 +67,12 @@ export default function Header() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-center pt-4 pb-2">
         <NavMenu setActive={setActive}>
-          <Link to="/" className="text-foreground hover:text-primary font-light py-2 px-3 rounded-lg transition-colors uppercase">
-            Acasă
+          <Link to="/" className="flex items-center py-2 px-3 rounded-lg transition-all hover:scale-105">
+            <img 
+              src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" 
+              alt="RMN Doctor Guide Logo" 
+              className="h-8 w-auto"
+            />
           </Link>
           
           <MenuItem setActive={setActive} active={active} item="Servicii RMN">

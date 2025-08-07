@@ -60,7 +60,7 @@ export default function RMNArticulatiiPage() {
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <AnimatedCard className="mt-8">
+          <AnimatedCard style={{marginTop: '32px'}}>
             <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">Introducere</h2>
             <p className="text-muted-foreground leading-relaxed text-center">
               RMN-ul articular oferă imagini excepțional de clare ale articulațiilor și structurilor adiacente, 

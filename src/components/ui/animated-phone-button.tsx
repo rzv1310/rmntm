@@ -120,9 +120,8 @@ export function AnimatedPhoneButton() {
               <span data-label="n" style={{"--i": 3} as React.CSSProperties}>n</span>
               <span data-label="ă" style={{"--i": 4} as React.CSSProperties}>ă</span>
               <span data-label="A" style={{"--i": 5} as React.CSSProperties}>A</span>
-              <span data-label="c" style={{"--i": 6} as React.CSSProperties}>c</span>
-              <span data-label="u" style={{"--i": 7} as React.CSSProperties}>u</span>
-              <span data-label="m" style={{"--i": 8} as React.CSSProperties}>m</span>
+              <span data-label="z" style={{"--i": 6} as React.CSSProperties}>z</span>
+              <span data-label="i" style={{"--i": 7} as React.CSSProperties}>i</span>
             </span>
           </div>
         </div>

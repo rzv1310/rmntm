@@ -74,7 +74,12 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
            }}>
         {displayCards.map((cardProps, index) => (
           <div key={index} 
-               className={cn("absolute", index === 0 ? "top-0 left-0" : index === 1 ? "top-12 left-4 md:top-8 md:left-16" : "top-24 left-8 md:top-16 md:left-32")}>
+               className={cn("absolute group", 
+                 index === 0 ? "top-0 left-0 z-30" : 
+                 index === 1 ? "top-12 left-4 md:top-8 md:left-16 z-20" : 
+                 "top-24 left-8 md:top-16 md:left-32 z-10",
+                 "hover:z-50"
+               )}>
             <DisplayCard {...cardProps} />
           </div>
         ))}

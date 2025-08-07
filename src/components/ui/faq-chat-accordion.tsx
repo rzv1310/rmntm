@@ -10,7 +10,7 @@ interface FAQItem {
   id: number;
   question: string;
   answer: string;
-  icon?: string;
+  icon?: string | React.ReactElement;
   iconPosition?: "left" | "right";
 }
 

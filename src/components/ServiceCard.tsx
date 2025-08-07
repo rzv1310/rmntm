@@ -21,7 +21,7 @@ export default function ServiceCard({
   className,
 }: ServiceCardProps) {
   return (
-    <div className={cn("medical-card service-card rounded-xl p-6 h-full flex flex-col", className)}>
+    <div className={cn("medical-card service-card rounded-xl p-6 h-full flex flex-col hover:-translate-y-2 transition-all duration-300 ease-out hover:shadow-lg", className)}>
       <div className="flex-1">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>

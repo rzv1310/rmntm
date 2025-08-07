@@ -583,7 +583,6 @@
     transform: rotate(353deg) skewX(4deg);
     display: block;
     text-decoration: none;
-    animation: phone-button-repeat 3s infinite;
   }
 
   .phone-bg {
@@ -724,9 +723,6 @@
   .phone-char.state-2 {
     position: absolute;
     left: 80px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.3s ease-in-out;
   }
   .phone-char.state-2 span::after {
     opacity: 1;
@@ -801,16 +797,6 @@
   }
 
   /** PHONE BUTTON STATES */
-
-  .animated-phone-button:hover .phone-char.state-1 {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  .animated-phone-button:hover .phone-char.state-2 {
-    opacity: 1;
-    transform: translateY(0);
-  }
 
   .animated-phone-button:hover .phone-char.state-1 span::before {
     animation: phone-charAppear 0.7s ease calc(var(--i) * 0.03s);
@@ -986,15 +972,6 @@
     to {
       stroke-dasharray: 2 60;
       stroke-dashoffset: -60;
-    }
-  }
-
-  @keyframes phone-button-repeat {
-    0%, 80%, 100% {
-      transform: scale(1);
-    }
-    90% {
-      transform: scale(1.02);
     }
   }
 }

@@ -56,9 +56,7 @@ export default function RMNArticulatiiPage() {
         </div>
 
         {/* Phone Button */}
-        <div className="mb-5">
-          <AnimatedPhoneButton />
-        </div>
+        <AnimatedPhoneButton />
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>

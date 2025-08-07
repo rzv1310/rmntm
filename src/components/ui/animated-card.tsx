@@ -22,11 +22,13 @@ export function AnimatedCard({ children, className }: AnimatedCardProps) {
            }} />
       
       {/* Animated blob */}
-      <div className="absolute z-10 top-1/2 left-1/2 w-32 h-32 rounded-full opacity-100 animate-blob-bounce"
-           style={{
-             backgroundColor: "#ff0000",
-             filter: "blur(12px)"
-           }} />
+      <div 
+        className="absolute z-10 top-1/2 left-1/2 w-32 h-32 rounded-full opacity-100"
+        style={{
+          backgroundColor: "#ff0000",
+          filter: "blur(12px)",
+          animation: "blob-bounce 5s infinite ease"
+        }} />
       
       {/* Content */}
       <div className="relative z-30 p-6 h-full flex flex-col justify-center">

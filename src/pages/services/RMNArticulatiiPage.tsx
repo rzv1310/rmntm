@@ -1,7 +1,8 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Phone, CheckCircle, Eye, AlertCircle } from "lucide-react";
+import { AnimatedCard } from "@/components/ui/animated-card";
+import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 
 const indicatii = [
   "Dureri articulare persistente",
@@ -14,42 +15,13 @@ const indicatii = [
   "Umflături și colecții lichidiene"
 ];
 
-const structuriEvaluate = [
-  "Cartilajul articular",
-  "Ligamente și tendoane",
-  "Meniscuri (la genunchi)",
-  "Sinovială și lichid articular",
-  "Oasele și structurile adiacente",
-  "Bursa articulară",
-  "Capsula articulară",
-  "Vascularizația regională"
-];
-
-const articulatiiPrincipale = [
-  {
-    nume: "Genunchi",
-    detalii: "Evaluare completă pentru meniscuri, ligamente, cartilaj"
-  },
-  {
-    nume: "Umăr",
-    detalii: "Manșeta rotatorilor, labrum, tendonul bicepsului"
-  },
-  {
-    nume: "Cot", 
-    detalii: "Epicondilite, leziuni ligamentare, artroză"
-  },
-  {
-    nume: "Încheietura mâinii",
-    detalii: "Tendoane, ligamente, osul scafoid"
-  },
-  {
-    nume: "Șold",
-    detalii: "Labrum acetabular, cartilaj, konflict femoro-acetabular"
-  },
-  {
-    nume: "Gleznă",
-    detalii: "Ligamente laterale, tendonul lui Ahile, cartilaj"
-  }
+const avantaje = [
+  "Vizualizare detaliată a cartilajului articular",
+  "Evaluarea ligamentelor și tendoanelor",
+  "Fără expunere la radiații ionizante",
+  "Imagini de înaltă rezoluție",
+  "Diagnostic diferențial precis",
+  "Planificarea tratamentului optim"
 ];
 
 export default function RMNArticulatiiPage() {
@@ -84,181 +56,133 @@ export default function RMNArticulatiiPage() {
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Introducere</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+          <AnimatedCard>
+            <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">Introducere</h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
               RMN-ul articular oferă imagini excepțional de clare ale articulațiilor și structurilor adiacente, 
               fără utilizarea radiațiilor ionizante. Această investigație este esențială pentru diagnosticarea 
               precisă a leziunilor sportive, patologiilor degenerative și a unei game largi de afecțiuni articulare.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Prin capacitatea sa de a vizualiza detaliat țesuturile moi, RMN-ul articular este considerat 
-              standardul de aur în evaluarea leziunilor ligamentare, tendinoase și a cartilajului articular.
-            </p>
-          </div>
+          </AnimatedCard>
         </section>
 
         {/* Indicații */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Articulații</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {indicatii.map((indicatie, index) => (
-              <div key={index} className="flex items-start gap-3 medical-card p-4 rounded-lg">
-                <AlertCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{indicatie}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Patologii comune</h3>
+              <div className="space-y-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Evaluări complexe</h3>
+              <div className="space-y-3">
+                {indicatii.slice(4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimatedCard>
           </div>
         </section>
 
-        {/* Articulații principale */}
+        {/* Pregătire */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          <h2 className="text-2xl font-semibold text-foreground mb-6">Articulații principale evaluate</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {articulatiiPrincipale.map((articulatie, index) => (
-              <div key={index} className="medical-card p-5 rounded-xl">
-                <h3 className="text-lg font-semibold text-foreground mb-2">{articulatie.nume}</h3>
-                <p className="text-sm text-muted-foreground">{articulatie.detalii}</p>
-              </div>
-            ))}
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <Clock className="h-5 w-5 text-red-500" />
+                Durată și pregătire
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Nu necesită pregătire specială</li>
+                <li>• Durata: 30-40 minute/articulație</li>
+                <li>• Îmbrăcăminte confortabilă</li>
+                <li>• Poziționare adecvată a articulației</li>
+              </ul>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <AlertCircle className="h-5 w-5 text-red-500" />
+                Anunțați existența
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Implanturilor metalice</li>
+                <li>• Protezelor articulare</li>
+                <li>• Dispozitivelor medicale</li>
+                <li>• Tatuajelor în zona investigată</li>
+              </ul>
+            </AnimatedCard>
           </div>
         </section>
 
-        {/* Ce detectează */}
+        {/* Avantaje */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
-            <Eye className="inline h-6 w-6 mr-2 text-primary" />
-            Ce detectează RMN-ul articular?
+            Avantajele RMN Articulații la Clinica Imagistică Avansată
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {structuriEvaluate.map((structura, index) => (
-              <div key={index} className="flex items-start gap-3 bg-gradient-soft p-4 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{structura}</span>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {avantaje.map((avantaj, index) => (
+              <AnimatedCard key={index} className="h-auto">
+                <div className="flex items-start gap-3 h-full">
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground text-center">{avantaj}</span>
+                </div>
+              </AnimatedCard>
             ))}
           </div>
         </section>
 
-        {/* Avantaje și proces */}
+        {/* Preț și decontare */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="medical-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Avantaje RMN Articular</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <span>Non-invaziv și fără radiații</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <span>Detalii anatomice de înaltă rezoluție</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <span>Evaluare completă a articulației</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <span>Diagnostic diferențial precis</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <span>Planificarea tratamentului optim</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="medical-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Procesul de investigație</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li><span className="font-medium">1.</span> Poziționare corespunzătoare</li>
-                <li><span className="font-medium">2.</span> Imobilizarea articulației</li>
-                <li><span className="font-medium">3.</span> Achiziție de imagini în planuri multiple</li>
-                <li><span className="font-medium">4.</span> Evaluare cu/fără substanță de contrast</li>
-                <li><span className="font-medium">5.</span> Analiza detaliată a structurilor</li>
-                <li><span className="font-medium">6.</span> Raport medical specializat</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Pregătire și informații practice */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-          <div className="bg-gradient-soft rounded-xl p-6">
-            <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătire și informații practice</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Pregătire</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Nu necesită pregătire specială</li>
-                  <li>• Îmbrăcăminte confortabilă</li>
-                  <li>• Înlăturați obiectele metalice</li>
-                  <li>• Aduceți investigații anterioare</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Durata</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• O articulație: 30-40 min</li>
-                  <li>• Multiple articulații: +15 min/articulație</li>
-                  <li>• Cu substanță de contrast: +10-15 min</li>
-                  <li>• Include poziționare și consultare</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Rezultate</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Raport în 24-48 ore</li>
-                  <li>• Imagini pe film sau CD</li>
-                  <li>• Consultare cu radiologul</li>
-                  <li>• Recomandări de tratament</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Informații despre preț */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Informații despre preț și decontare</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Decontare CAS</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Investigațiile RMN articulare pot fi decontate prin CAS cu bilet de trimitere de la 
-                  medicul ortoped sau reumatolog. Verificați condițiile specifice la programare.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Prețuri orientative</h3>
-                <ul className="space-y-1 text-muted-foreground">
-                  <li>• RMN articulații mici: <span className="font-medium">765,00 lei</span></li>
-                  <li>• RMN genunchi bilateral: <span className="font-medium">1.015,00 lei</span></li>
-                  <li>• Pentru alte articulații, contactați clinica</li>
-                </ul>
-              </div>
-            </div>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Decontare CAS</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">
+                Investigațiile RMN articulare pot fi decontate prin CAS cu bilet de trimitere de la 
+                medicul ortoped sau reumatolog. Verificați condițiile specifice la programare.
+              </p>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Preț orientativ</h3>
+              <p className="text-2xl font-bold text-red-500 mb-2 text-center">765,00 lei</p>
+              <p className="text-sm text-muted-foreground text-center">
+                *Preț pentru articulații mici. Genunchi bilateral: 1.015,00 lei
+              </p>
+            </AnimatedCard>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">Programează RMN Articulații</h2>
+            <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Articulații</h2>
             <p className="text-white/90 mb-6">
               Obține un diagnostic precis pentru problemele articulare și începe tratamentul optim.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  Programează acum
+                  <Phone className="h-5 w-5 text-red-500" />
+                  0256 404 500
                 </a>
               </GradientButton>
               <GradientButton asChild variant="variant">
-                <a href="/preturi-rmn">Vezi toate prețurile</a>
+                <a href="/contact">Contact complet</a>
               </GradientButton>
             </div>
           </div>

@@ -1,36 +1,18 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Phone, CheckCircle, AlertTriangle } from "lucide-react";
+import { AnimatedCard } from "@/components/ui/animated-card";
+import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 
-const segmente = [
-  {
-    title: "RMN Coloană Cervicală",
-    indicatii: [
-      "Dureri de gât",
-      "Blocaje cervicale",
-      "Hernii de disc C1–C7",
-      "Instabilitate cervicală"
-    ]
-  },
-  {
-    title: "RMN Coloană Lombară",
-    indicatii: [
-      "Dureri lombare (lombalgii)",
-      "Hernii de disc L1–S1",
-      "Canal lombar îngust (stenoză)",
-      "Iscialgia"
-    ]
-  },
-  {
-    title: "RMN Coloană Dorsală",
-    indicatii: [
-      "Dureri între omoplați",
-      "Deformări (scolioză, cifoză)",
-      "Patologii vertebrale",
-      "Evaluare post-traumatică"
-    ]
-  }
+const indicatii = [
+  "Dureri de gât și blocaje cervicale",
+  "Hernii de disc cervicale C1–C7",
+  "Instabilitate cervicală",
+  "Dureri lombare (lombalgii)",
+  "Hernii de disc lombare L1–S1",
+  "Canal lombar îngust (stenoză)",
+  "Iscialgia și dureri radiante",
+  "Deformări (scolioză, cifoză)"
 ];
 
 const avantaje = [
@@ -74,147 +56,133 @@ export default function RMNColoanaPage() {
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Introducere</h2>
-            <p className="text-muted-foreground leading-relaxed">
+          <AnimatedCard>
+            <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">Introducere</h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
               RMN-ul coloanei vertebrale evaluează în detaliu vertebrele și țesuturile moi adiacente, 
               fără radiații ionizante. Această investigație este utilă atât în diagnostic, cât și în 
-              monitorizarea evoluției diferitelor afecțiuni ale coloanei vertebrale, oferind informații 
-              precise despre discurile intervertebrale, măduva spinării și nervii adiacenți.
+              monitorizarea evoluției diferitelor afecțiuni ale coloanei vertebrale.
             </p>
+          </AnimatedCard>
+        </section>
+
+        {/* Indicații */}
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Coloană</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Segmente cervicale și dorsale</h3>
+              <div className="space-y-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Segmente lombare și patologii</h3>
+              <div className="space-y-3">
+                {indicatii.slice(4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimatedCard>
           </div>
         </section>
 
-        {/* Indicații pe segmente */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-          <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pe segmente</h2>
-          <div className="space-y-6">
-            {segmente.map((segment, index) => (
-              <div key={index} className="medical-card p-6 rounded-xl">
-                <h3 className="text-xl font-semibold text-foreground mb-4">{segment.title}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {segment.indicatii.map((indicatie, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <AlertTriangle className="h-4 w-4 text-warning mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">{indicatie}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+        {/* Pregătire */}
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <Clock className="h-5 w-5 text-red-500" />
+                Durată și pregătire
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Nu necesită pregătire specială</li>
+                <li>• Durata: 30-45 minute/segment</li>
+                <li>• Îmbrăcăminte confortabilă</li>
+                <li>• Înlăturați obiectele metalice</li>
+              </ul>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <AlertCircle className="h-5 w-5 text-red-500" />
+                Anunțați existența
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Implanturilor metalice</li>
+                <li>• Pacemaker-ului cardiac</li>
+                <li>• Protezelor dentare</li>
+                <li>• Dispozitivelor medicale implantabile</li>
+              </ul>
+            </AnimatedCard>
           </div>
         </section>
 
         {/* Avantaje */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          <h2 className="text-2xl font-semibold text-foreground mb-6">Avantajele RMN Coloană</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">
+            Avantajele RMN Coloană la Clinica Imagistică Avansată
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {avantaje.map((avantaj, index) => (
-              <div key={index} className="flex items-start gap-3 medical-card p-4 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{avantaj}</span>
-              </div>
+              <AnimatedCard key={index} className="h-auto">
+                <div className="flex items-start gap-3 h-full">
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground text-center">{avantaj}</span>
+                </div>
+              </AnimatedCard>
             ))}
           </div>
         </section>
 
-        {/* Ce detectează */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-          <div className="bg-gradient-soft rounded-xl p-6">
-            <h2 className="text-2xl font-semibold text-foreground mb-6">Ce detectează RMN-ul coloanei?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Structuri evaluate</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Vertebrele și corpii vertebrali</li>
-                  <li>• Discurile intervertebrale</li>
-                  <li>• Măduva spinării</li>
-                  <li>• Rădăcinile nervoase</li>
-                  <li>• Ligamentele spinale</li>
-                  <li>• Mușchii paravertebrali</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Patologii diagnosticate</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Hernii de disc</li>
-                  <li>• Stenoză de canal</li>
-                  <li>• Spondiloză</li>
-                  <li>• Tumori spinale</li>
-                  <li>• Infecții vertebrale</li>
-                  <li>• Traumatisme vertebrale</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pregătire și durată */}
+        {/* Preț și decontare */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Pregătire și durată</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Pregătire</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Nu necesită pregătire specială</li>
-                  <li>• Îmbrăcăminte confortabilă</li>
-                  <li>• Înlăturați obiectele metalice</li>
-                  <li>• Anunțați medicația actuală</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Durata investigației</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• RMN cervical: 30-40 minute</li>
-                  <li>• RMN lombar: 30-40 minute</li>
-                  <li>• RMN dorsal: 35-45 minute</li>
-                  <li>• Multiple segmente: +15-20 min/segment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Preț informativ */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-          <div className="bg-accent/10 border border-accent/20 rounded-xl p-6">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Informații despre preț și decontare</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Decontare CAS</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Investigațiile pot fi decontate prin CAS cu bilet de trimitere corespunzător. 
-                  Contactați recepția pentru verificarea condițiilor de decontare.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Preț orientativ</h3>
-                <p className="text-muted-foreground">
-                  Prețurile variază în funcție de segmentul investigat. Pentru informații exacte, 
-                  contactați clinica la <a href="tel:+40256404500" className="text-primary font-medium">0256 404 500</a>.
-                </p>
-              </div>
-            </div>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Decontare CAS</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">
+                Investigațiile pot fi decontate prin Casa de Asigurări de Sănătate cu bilet de trimitere 
+                de la medicul de familie sau specialist. Pentru detalii, contactați recepția la programare.
+              </p>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Preț orientativ</h3>
+              <p className="text-2xl font-bold text-red-500 mb-2 text-center">750,00 lei</p>
+              <p className="text-sm text-muted-foreground text-center">
+                *Preț pentru RMN per segment. Multiple segmente: preț preferențial
+              </p>
+            </AnimatedCard>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">Programează RMN Coloană Vertebrală</h2>
+            <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Coloană</h2>
             <p className="text-white/90 mb-6">
               Diagnosticul rapid și precis este esențial pentru tratamentul optim al afecțiunilor coloanei.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  Programează acum
+                  <Phone className="h-5 w-5 text-red-500" />
+                  0256 404 500
                 </a>
               </GradientButton>
               <GradientButton asChild variant="variant">
-                <a href="/preturi-rmn">Vezi prețurile</a>
+                <a href="/contact">Contact complet</a>
               </GradientButton>
             </div>
           </div>

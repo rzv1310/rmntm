@@ -1,39 +1,27 @@
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import ServiceLinks from "@/components/ServiceLinks";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Phone, CheckCircle, Eye, AlertCircle, Heart } from "lucide-react";
+import { AnimatedCard } from "@/components/ui/animated-card";
+import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 
 const indicatii = [
   "Screening mamar la risc crescut",
   "Evaluare leziuni detectate la mamografie",
-  "Monitorizare cicatrici post-operatorii",
   "Suspiciune de cancer mamar",
+  "Monitorizare cicatrici post-operatorii",
   "Evaluare pre-operatorie",
   "Controlul eficacității tratamentului",
   "Identificarea cancerului multicentrik",
   "Screening la portătoarele BRCA"
 ];
 
-const avantajeRMN = [
+const avantaje = [
   "Sensibilitate ridicată pentru cancer",
   "Fără radiații ionizante",
   "Evaluare țesuturilor dense",
-  "Detectare precoce",
-  "Caracterizarea leziunilor",
-  "Evaluare bilaterală simultană",
-  "Monitorizare tratament",
-  "Screening la risc crescut"
-];
-
-const structuriEvaluate = [
-  "Țesutul mamar glandular",
-  "Canalele galactofore",
-  "Ganglionii limfatici axilari",
-  "Vascularizația mamară",
-  "Țesutul adipos",
-  "Areola și mamelonul",
-  "Mușchiul pectoral",
-  "Spațiul retromamarian"
+  "Detectare precoce de leziuni",
+  "Caracterizarea precisă a leziunilor",
+  "Evaluare bilaterală simultană"
 ];
 
 export default function RMNMamarPage() {
@@ -68,160 +56,133 @@ export default function RMNMamarPage() {
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <div className="flex items-center gap-3 mb-4">
-              <Heart className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-semibold text-foreground">Introducere</h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+          <AnimatedCard>
+            <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">Introducere</h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
               RMN-ul mamar este cea mai sensibilă metodă imagistică pentru detectarea cancerului de sân, 
               oferind imagini detaliate ale întregii structuri mamare. Această investigație este esențială 
               pentru femeile cu risc crescut și pentru evaluarea completă a leziunilor mamare.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Prin capacitatea sa superioară de a diferenția țesuturile, RMN-ul mamar poate detecta 
-              leziuni mici care nu sunt vizibile la mamografie sau ecografie, fiind deosebit de util 
-              la femeile cu țesut mamar dens.
-            </p>
-          </div>
+          </AnimatedCard>
         </section>
 
         {/* Indicații */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Mamar</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {indicatii.map((indicatie, index) => (
-              <div key={index} className="flex items-start gap-3 medical-card p-4 rounded-lg">
-                <AlertCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{indicatie}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Ce detectează */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          <h2 className="text-2xl font-semibold text-foreground mb-6">
-            <Eye className="inline h-6 w-6 mr-2 text-primary" />
-            Ce evaluează RMN-ul mamar?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {structuriEvaluate.map((structura, index) => (
-              <div key={index} className="flex items-start gap-3 bg-gradient-soft p-4 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{structura}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Avantaje și proces */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="medical-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Avantaje RMN Mamar</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                {avantajeRMN.map((avantaj, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                    <span>{avantaj}</span>
-                  </li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Screening și diagnostic</h3>
+              <div className="space-y-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
                 ))}
-              </ul>
-            </div>
-
-            <div className="medical-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Procesul de investigație</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li><span className="font-medium">1.</span> Poziționare în decubit ventral</li>
-                <li><span className="font-medium">2.</span> Administrare substanță de contrast</li>
-                <li><span className="font-medium">3.</span> Achiziție imagini native</li>
-                <li><span className="font-medium">4.</span> Secvențe dinamice post-contrast</li>
-                <li><span className="font-medium">5.</span> Evaluare bilaterală completă</li>
-                <li><span className="font-medium">6.</span> Raport specializat cu recomandări</li>
-              </ul>
-            </div>
+              </div>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Evaluări specializate</h3>
+              <div className="space-y-3">
+                {indicatii.slice(4).map((indicatie, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimatedCard>
           </div>
         </section>
 
-        {/* Pregătire și informații practice */}
+        {/* Pregătire */}
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <Clock className="h-5 w-5 text-red-500" />
+                Durată și pregătire
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Efectuare în zilele 7-14 ale ciclului</li>
+                <li>• Durata: aproximativ 45-60 minute</li>
+                <li>• Nu aplicați deodorant sau pudră</li>
+                <li>• Include substanță de contrast</li>
+              </ul>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <AlertCircle className="h-5 w-5 text-red-500" />
+                Anunțați existența
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Sarcinii sau alăptării</li>
+                <li>• Implanturilor mamare</li>
+                <li>• Alergiilor medicamentoase</li>
+                <li>• Investigațiilor anterioare</li>
+              </ul>
+            </AnimatedCard>
+          </div>
+        </section>
+
+        {/* Avantaje */}
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">
+            Avantajele RMN Mamar la Clinica Imagistică Avansată
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {avantaje.map((avantaj, index) => (
+              <AnimatedCard key={index} className="h-auto">
+                <div className="flex items-start gap-3 h-full">
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground text-center">{avantaj}</span>
+                </div>
+              </AnimatedCard>
+            ))}
+          </div>
+        </section>
+
+        {/* Preț și decontare */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <div className="bg-gradient-soft rounded-xl p-6">
-            <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătire și informații practice</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Pregătire</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Efectuare în zilele 7-14 ale ciclului</li>
-                  <li>• Nu aplicați deodorant sau pudră</li>
-                  <li>• Îmbrăcăminte fără metal</li>
-                  <li>• Aduceți investigații anterioare</li>
-                  <li>• Informați despre sarcină/alăptare</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Durata</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• RMN mamar bilateral: 45-60 min</li>
-                  <li>• Include administrare contrast</li>
-                  <li>• Poziționare și consultare: +15 min</li>
-                  <li>• Total: aproximativ 75 min</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Rezultate</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Raport în 24-48 ore</li>
-                  <li>• Imagini pe film sau CD</li>
-                  <li>• Consultare cu radiologul</li>
-                  <li>• Recomandări suplimentare</li>
-                  <li>• Trimitere la specialist dacă necesar</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Informații despre preț */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Informații despre preț și decontare</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Decontare CAS</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  RMN-ul mamar poate fi decontat prin CAS cu bilet de trimitere de la medicul ginecolog, 
-                  oncolog sau chirurg. Condițiile specifice vor fi verificate la programare.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Preț orientativ</h3>
-                <ul className="space-y-1 text-muted-foreground">
-                  <li>• RMN mamar bilateral: <span className="font-medium">850,00 lei</span></li>
-                  <li>• Include substanța de contrast</li>
-                  <li>• Contactați pentru informații complete</li>
-                </ul>
-              </div>
-            </div>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Decontare CAS</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">
+                RMN-ul mamar poate fi decontat prin CAS cu bilet de trimitere de la medicul ginecolog, 
+                oncolog sau chirurg. Condițiile specifice vor fi verificate la programare.
+              </p>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Preț orientativ</h3>
+              <p className="text-2xl font-bold text-red-500 mb-2 text-center">850,00 lei</p>
+              <p className="text-sm text-muted-foreground text-center">
+                *Preț pentru RMN mamar bilateral cu substanță de contrast inclusă
+              </p>
+            </AnimatedCard>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">Programează RMN Mamar</h2>
+            <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Mamar</h2>
             <p className="text-white/90 mb-6">
               Protejează-ți sănătatea cu cea mai avansată metodă de screening mamar disponibilă.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  Programează acum
+                  <Phone className="h-5 w-5 text-red-500" />
+                  0256 404 500
                 </a>
               </GradientButton>
               <GradientButton asChild variant="variant">
-                <a href="/preturi-rmn">Vezi toate prețurile</a>
+                <a href="/contact">Contact complet</a>
               </GradientButton>
             </div>
           </div>

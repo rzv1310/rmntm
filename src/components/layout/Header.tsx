@@ -10,7 +10,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 const navigation = [
   { name: "Acasă", href: "/" },
   {
-    name: "Servicii",
+    name: "Servicii RMN",
     href: "/servicii",
     submenu: [
       { name: "RMN Cerebral", href: "/servicii/rmn-cerebral" },
@@ -71,9 +71,9 @@ export default function Header() {
             Acasă
           </Link>
           
-          <MenuItem setActive={setActive} active={active} item="Servicii">
+          <MenuItem setActive={setActive} active={active} item="Servicii RMN">
             <div className="grid grid-cols-2 gap-4 p-2 min-w-[400px]">
-              {navigation.find(item => item.name === "Servicii")?.submenu?.map((service) => (
+              {navigation.find(item => item.name === "Servicii RMN")?.submenu?.map((service) => (
                 <HoveredLink key={service.href} to={service.href}>
                   {service.name}
                 </HoveredLink>
@@ -149,7 +149,7 @@ export default function Header() {
                               className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground font-light uppercase"
                               onClick={closeMenu}
                             >
-                              Toate serviciile
+                              Toate Investigațiile
                             </Link>
                             {item.submenu.map((subItem) => (
                               <Link

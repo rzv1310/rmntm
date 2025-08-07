@@ -38,14 +38,14 @@ export default function ContactPage() {
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-6 w-6 text-primary mt-1" />
+                  <MapPin className="h-6 w-6 text-red-500 mt-1" />
                   <div>
                     <h3 className="font-medium text-foreground">Adresa</h3>
                     <p className="text-muted-foreground">Bulevardul Liviu Rebreanu 156, Timișoara</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock className="h-6 w-6 text-primary mt-1" />
+                  <Clock className="h-6 w-6 text-red-500 mt-1" />
                   <div>
                     <h3 className="font-medium text-foreground">Program</h3>
                     <p className="text-muted-foreground">Luni–Vineri 8:00–20:00</p>

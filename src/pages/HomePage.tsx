@@ -293,7 +293,7 @@ export default function HomePage() {
                 description: "Timpi de așteptare reduși.",
                 date: "",
                 titleClassName: "text-black",
-                className: "[grid-area:stack] translate-x-8 md:translate-x-16 translate-y-5 md:translate-y-10 hover:-translate-y-10 transition-all duration-300 ease-out before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+                className: "[grid-area:stack] translate-x-8 md:translate-x-16 translate-y-5 md:translate-y-10 hover:-translate-y-10 transition-all duration-300 ease-out grayscale-[100%] hover:grayscale-0",
               },
               {
                 icon: <Shield className="size-4 text-white" />,

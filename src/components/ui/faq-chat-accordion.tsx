@@ -112,7 +112,7 @@ export function FaqAccordion({
                 <div className="ml-7 mt-1 md:ml-16">
                   <div
                     className={cn(
-                      "relative max-w-xs rounded-2xl bg-primary px-4 py-2 text-primary-foreground",
+                      "relative max-w-xs rounded-2xl bg-primary px-4 py-2 text-primary-foreground font-kalam text-base leading-relaxed",
                       answerClassName
                     )}
                   >

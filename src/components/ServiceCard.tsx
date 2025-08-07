@@ -38,7 +38,7 @@ export default function ServiceCard({
           <ul className="space-y-2 mb-6">
             {highlights.map((highlight, index) => (
               <li key={index} className="flex items-start gap-2 text-sm">
-                <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-burgundy-dark mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">{highlight}</span>
               </li>
             ))}

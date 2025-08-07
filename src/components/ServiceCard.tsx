@@ -26,9 +26,9 @@ export default function ServiceCard({
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
           {isDecontCAS && (
-            <GradientButton variant="variant" className="text-xs font-medium px-3 py-1 rounded-full min-w-0 h-auto">
+            <div className="text-xs font-medium px-3 py-1 rounded-full min-w-0 h-auto border border-burgundy-dark text-burgundy-dark bg-transparent">
               Decontat CAS
-            </GradientButton>
+            </div>
           )}
         </div>
         

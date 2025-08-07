@@ -167,9 +167,9 @@ export default function HomePage() {
                 Imagistică de încredere în Timișoara, cu programare și rezultate rapide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
-                <GradientButton asChild className="min-w-[200px]">
-                  <a href="tel:+40256404500" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
+                <GradientButton asChild variant="white" className="min-w-[200px]">
+                  <a href="tel:+40256404500" className="flex items-center gap-2 text-black">
+                    <Phone className="h-5 w-5 text-black" />
                     Sună acum!
                   </a>
                 </GradientButton>

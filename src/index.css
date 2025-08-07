@@ -339,6 +339,29 @@
     --border-color-2: hsla(320, 50%, 90%, 0.75);
   }
 
+  .gradient-button-white {
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --color-3: #ffffff;
+    --color-4: #ffffff;
+    --color-5: #ffffff;
+    --border-angle: 0deg;
+    --border-color-1: hsla(0, 0%, 80%, 0.3);
+    --border-color-2: hsla(0, 0%, 80%, 0.3);
+    color: #000000 !important;
+  }
+
+  .gradient-button-white:hover {
+    --color-1: #ffffff;
+    --color-2: #ffffff;
+    --color-3: #ffffff;
+    --color-4: #ffffff;
+    --color-5: #ffffff;
+    --border-color-1: hsla(0, 0%, 70%, 0.5);
+    --border-color-2: hsla(0, 0%, 70%, 0.5);
+    color: #000000 !important;
+  }
+
   /* Hero animations */
   .hero-gradient {
     background: var(--gradient-hero);

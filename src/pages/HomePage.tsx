@@ -7,6 +7,7 @@ import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown, ArrowRight }
 import DisplayCards from "@/components/ui/display-cards";
 import { useState } from "react";
 import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
+import { SpiralAnimation } from "@/components/ui/spiral-animation";
 
 import { motion } from "framer-motion";
 
@@ -153,10 +154,9 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="relative min-h-[600px] flex flex-col justify-center bg-neutral-950">
+        <div className="relative min-h-[600px] flex flex-col justify-center bg-black">
           <div className="absolute inset-0">
-            <FloatingPaths position={1} />
-            <FloatingPaths position={-1} />
+            <SpiralAnimation />
           </div>
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
             <div className="text-center text-white">

@@ -56,14 +56,14 @@ export default function RMNCerebralPage() {
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Introducere</h2>
-            <p className="text-muted-foreground leading-relaxed">
+          <AnimatedCard>
+            <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">Introducere</h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
               RMN-ul cerebral este o investigație imagistică non-invazivă, critică pentru evaluarea detaliată 
               a creierului și a structurilor sale, fără expunere la radiații ionizante. Această metodă oferă 
               imagini de înaltă rezoluție care permit diagnosticarea precisă a unei game largi de afecțiuni neurologice.
             </p>
-          </div>
+          </AnimatedCard>
         </section>
 
         {/* Indicații */}
@@ -75,7 +75,7 @@ export default function RMNCerebralPage() {
               <div className="space-y-3">
                 {indicatii.slice(0, 4).map((indicatie, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <AlertCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
                   </div>
                 ))}
@@ -87,7 +87,7 @@ export default function RMNCerebralPage() {
               <div className="space-y-3">
                 {indicatii.slice(4).map((indicatie, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <AlertCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
                   </div>
                 ))}
@@ -99,33 +99,32 @@ export default function RMNCerebralPage() {
         {/* Pregătire */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
-          <div className="bg-gradient-soft rounded-xl p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-primary" />
-                  Durată și pregătire
-                </h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Nu necesită pregătire specială</li>
-                  <li>• Durata: aproximativ 30-45 minute</li>
-                  <li>• Mențineți imobilitatea pe parcursul examinării</li>
-                  <li>• Puteți relua activitățile normale imediat după</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-warning" />
-                  Anunțați existența
-                </h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Implanturilor metalice</li>
-                  <li>• Pacemaker-ului cardiac</li>
-                  <li>• Protezelor dentare</li>
-                  <li>• Dispozitivelor medicale implantabile</li>
-                </ul>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <Clock className="h-5 w-5 text-red-500" />
+                Durată și pregătire
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Nu necesită pregătire specială</li>
+                <li>• Durata: aproximativ 30-45 minute</li>
+                <li>• Mențineți imobilitatea pe parcursul examinării</li>
+                <li>• Puteți relua activitățile normale imediat după</li>
+              </ul>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center gap-2 justify-center">
+                <AlertCircle className="h-5 w-5 text-red-500" />
+                Anunțați existența
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-center">
+                <li>• Implanturilor metalice</li>
+                <li>• Pacemaker-ului cardiac</li>
+                <li>• Protezelor dentare</li>
+                <li>• Dispozitivelor medicale implantabile</li>
+              </ul>
+            </AnimatedCard>
           </div>
         </section>
 
@@ -136,34 +135,35 @@ export default function RMNCerebralPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {avantaje.map((avantaj, index) => (
-              <div key={index} className="flex items-start gap-3 medical-card p-4 rounded-lg">
-                <CheckCircle className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">{avantaj}</span>
-              </div>
+              <AnimatedCard key={index} className="h-auto">
+                <div className="flex items-start gap-3 h-full">
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground text-center">{avantaj}</span>
+                </div>
+              </AnimatedCard>
             ))}
           </div>
         </section>
 
         {/* Preț și decontare */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <div className="medical-card p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Preț și decontare</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Decontare CAS</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Serviciile pot fi decontate prin Casa de Asigurări de Sănătate cu bilet de trimitere 
-                  de la medicul de familie sau specialist. Pentru detalii, contactați recepția la programare.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-3">Preț orientativ</h3>
-                <p className="text-2xl font-bold text-primary mb-2">835,00 lei</p>
-                <p className="text-sm text-muted-foreground">
-                  *Preț pentru RMN cerebral nativ. Cu substanță de contrast: +100-150 lei
-                </p>
-              </div>
-            </div>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Decontare CAS</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">
+                Serviciile pot fi decontate prin Casa de Asigurări de Sănătate cu bilet de trimitere 
+                de la medicul de familie sau specialist. Pentru detalii, contactați recepția la programare.
+              </p>
+            </AnimatedCard>
+            
+            <AnimatedCard>
+              <h3 className="text-lg font-medium text-foreground mb-3 text-center">Preț orientativ</h3>
+              <p className="text-2xl font-bold text-primary mb-2 text-center">835,00 lei</p>
+              <p className="text-sm text-muted-foreground text-center">
+                *Preț pentru RMN cerebral nativ. Cu substanță de contrast: +100-150 lei
+              </p>
+            </AnimatedCard>
           </div>
         </section>
 
@@ -177,7 +177,7 @@ export default function RMNCerebralPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
+                  <Phone className="h-5 w-5 text-red-500" />
                   0256 404 500
                 </a>
               </GradientButton>

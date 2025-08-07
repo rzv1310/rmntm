@@ -177,7 +177,7 @@ export default function RMNCerebralPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GradientButton asChild>
                 <a href="tel:+40256404500" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-red-500" />
+                  <Phone className="h-5 w-5 text-white" />
                   0256 404 500
                 </a>
               </GradientButton>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import ServiceCard from "@/components/ServiceCard";
-import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown, ArrowRight, Magnet } from "lucide-react";
+import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown, ArrowRight, CalendarClock } from "lucide-react";
 import DisplayCards from "@/components/ui/display-cards";
 import { useState } from "react";
 import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
@@ -125,7 +125,7 @@ const faqs = [
     id: 1,
     question: "Ce este RMN?",
     answer: "RMN (Rezonanța Magnetică Nucleară) este o investigație imagistică non-invazivă care folosește câmpuri magnetice puternice și unde radio pentru a crea imagini detaliate ale organelor și țesuturilor din corp, fără expunere la radiații ionizante.",
-    icon: <Magnet className="w-6 h-6" />,
+    icon: <CalendarClock className="w-6 h-6" />,
     iconPosition: "right" as const,
   },
   {

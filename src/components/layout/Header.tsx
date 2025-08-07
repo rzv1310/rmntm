@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Menu as NavMenu, MenuItem, HoveredLink } from "@/components/ui/navbar-menu";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const navigation = [
   { name: "Acasă", href: "/" },
@@ -29,6 +30,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -53,6 +55,7 @@ export default function Header() {
 
   const closeMenu = () => {
     setIsOpen(false);
+    setIsServicesOpen(false);
   };
 
   useEffect(() => {
@@ -124,27 +127,43 @@ export default function Header() {
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.submenu ? (
-                      <div>
-                        <Link
-                          to={item.href}
-                          className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary font-light uppercase"
-                          onClick={closeMenu}
-                        >
-                          {item.name}
-                        </Link>
-                        <div className="mt-2 space-y-2">
-                          {item.submenu.map((subItem) => (
+                      <Collapsible 
+                        open={isServicesOpen} 
+                        onOpenChange={setIsServicesOpen}
+                      >
+                        <div className="space-y-2">
+                          <CollapsibleTrigger asChild>
+                            <button className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground hover:text-primary font-light uppercase transition-colors">
+                              {item.name}
+                              <ChevronDown 
+                                className={cn(
+                                  "h-4 w-4 transition-transform duration-200",
+                                  isServicesOpen && "rotate-180"
+                                )} 
+                              />
+                            </button>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent className="space-y-2">
                             <Link
-                              key={subItem.name}
-                              to={subItem.href}
+                              to={item.href}
                               className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground font-light uppercase"
                               onClick={closeMenu}
                             >
-                              {subItem.name}
+                              Toate serviciile
                             </Link>
-                          ))}
+                            {item.submenu.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block rounded-md px-6 py-2 text-sm text-muted-foreground hover:text-foreground font-light uppercase"
+                                onClick={closeMenu}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </CollapsibleContent>
                         </div>
-                      </div>
+                      </Collapsible>
                     ) : (
                       <Link
                         to={item.href}

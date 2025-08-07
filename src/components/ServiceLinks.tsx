@@ -9,7 +9,7 @@ const allServices = [
   { title: "RMN Abdominal", href: "/servicii/rmn-abdominal" },
   { title: "RMN Pelvin", href: "/servicii/rmn-pelvin" },
   { title: "RMN Mamar", href: "/servicii/rmn-mamar" },
-  { title: "RMN Timișoara - Medlife", href: "/servicii/rmn-timisoara-medlife" },
+  { title: "Vezi Prețuri RMN", href: "/preturi-rmn" },
 ];
 
 interface ServiceLinksProps {

@@ -8,7 +8,7 @@ const allServices = [
   { title: "RMN Articulații", href: "/servicii/rmn-articulatii" },
   { title: "RMN Abdominal", href: "/servicii/rmn-abdominal" },
   { title: "RMN Pelvin", href: "/servicii/rmn-pelvin" },
-  { title: "RMN Umăr", href: "/servicii/rmn-umar" },
+  { title: "RMN Mamar", href: "/servicii/rmn-mamar" },
   { title: "RMN Timișoara - Medlife", href: "/servicii/rmn-timisoara-medlife" },
 ];
 

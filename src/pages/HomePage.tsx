@@ -94,10 +94,10 @@ const services = [
     isDecontCAS: true,
   },
   {
-    title: "RMN Umăr",
-    description: "Examinare dedicată pentru diagnosticarea leziunilor de tendoane, labrum și capsulă articulară.",
-    href: "/servicii/rmn-umar",
-    highlights: ["Manșeta rotatorilor", "Instabilitate articulară", "Tendinite și bursite"],
+    title: "RMN Mamar",
+    description: "Examinare specializată pentru screeningul și diagnosticarea afecțiunilor mamare, inclusiv detectarea precoce a cancerului.",
+    href: "/servicii/rmn-mamar",
+    highlights: ["Screening mamar", "Detectare precoce cancer", "Evaluare leziuni benigne"],
     isDecontCAS: true,
   },
 ];

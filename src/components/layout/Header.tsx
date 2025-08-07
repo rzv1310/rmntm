@@ -18,7 +18,7 @@ const navigation = [
       { name: "RMN Articulații", href: "/servicii/rmn-articulatii" },
       { name: "RMN Abdominal", href: "/servicii/rmn-abdominal" },
       { name: "RMN Pelvin", href: "/servicii/rmn-pelvin" },
-      { name: "RMN Umăr", href: "/servicii/rmn-umar" },
+      { name: "RMN Mamar", href: "/servicii/rmn-mamar" },
     ],
   },
   { name: "Prețuri RMN", href: "/preturi-rmn" },

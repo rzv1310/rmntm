@@ -234,7 +234,7 @@ export default function RMNArticulatiiPage() {
               <div>
                 <h3 className="text-lg font-medium text-foreground mb-3">Prețuri orientative</h3>
                 <ul className="space-y-1 text-muted-foreground">
-                  <li>• RMN umăr unilateral: <span className="font-medium">765,00 lei</span></li>
+                  <li>• RMN articulații mici: <span className="font-medium">765,00 lei</span></li>
                   <li>• RMN genunchi bilateral: <span className="font-medium">1.015,00 lei</span></li>
                   <li>• Pentru alte articulații, contactați clinica</li>
                 </ul>

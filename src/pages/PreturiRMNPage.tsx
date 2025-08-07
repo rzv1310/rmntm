@@ -5,7 +5,7 @@ import { Phone, Info } from "lucide-react";
 
 const preturi = [
   { serviciu: "RMN cerebral nativ", pret: "835,00 lei" },
-  { serviciu: "RMN umăr unilateral nativ", pret: "765,00 lei" },
+  { serviciu: "RMN mamar bilateral nativ", pret: "850,00 lei" },
   { serviciu: "RMN genunchi bilateral nativ", pret: "1.015,00 lei" },
   { serviciu: "RMN abdomen superior nativ", pret: "835,00 lei" },
   { serviciu: "RMN pelvis nativ", pret: "835,00 lei" },

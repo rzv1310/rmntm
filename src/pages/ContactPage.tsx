@@ -13,7 +13,7 @@ export default function ContactPage() {
 
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Contact</h1>
-          <p className="text-xl text-muted-foreground">Contactează-ne pentru programări și informații.</p>
+          <p className="text-xl text-muted-foreground">Sună pentru programări și informații !</p>
         </div>
 
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>

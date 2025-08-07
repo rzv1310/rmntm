@@ -25,18 +25,21 @@ function DisplayCard({
   return (
     <div
       className={cn(
-        "relative flex h-28 md:h-44 w-[18rem] md:w-[26.5rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 hover:border-white/20 hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2 before:absolute before:inset-0 before:z-[-1] before:content-[''] after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[16rem] md:after:w-[24.5rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none",
+        "relative flex h-28 md:h-44 w-[18rem] md:w-[26.5rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 hover:border-white/20 hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[16rem] md:after:w-[24.5rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none",
         className
       )}
     >
-      <div>
+      {/* Hover overlay to ensure full coverage */}
+      <div className="absolute inset-0 z-10 rounded-xl" />
+      
+      <div className="relative z-20">
         <span className="relative inline-block rounded-full bg-blue-800 p-1">
           {icon}
         </span>
         <p className={cn("text-lg font-medium", titleClassName)}>{title}</p>
       </div>
-      <p className="whitespace-nowrap text-lg">{description}</p>
-      <p className="text-muted-foreground">{date}</p>
+      <p className="whitespace-nowrap text-lg relative z-20">{description}</p>
+      <p className="text-muted-foreground relative z-20">{date}</p>
     </div>
   );
 }

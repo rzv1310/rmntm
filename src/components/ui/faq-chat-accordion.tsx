@@ -69,7 +69,9 @@ export function FaqAccordion({
                       style={{
                         transform: item.iconPosition === "right" 
                           ? "rotate(7deg) translateX(15px) translateY(-5px)" 
-                          : "rotate(-4deg)",
+                          : item.id === 4 
+                            ? "rotate(-4deg) translateX(-5px)"
+                            : "rotate(-4deg)",
                       }}
                     >
                       {typeof item.icon === 'string' ? (

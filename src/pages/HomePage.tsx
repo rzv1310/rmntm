@@ -142,7 +142,7 @@ const faqs = [
     id: 4,
     question: "În cât timp primesc rezultatele iRM?",
     answer: "Rapoartele medicale sunt disponibile în aprox. 2-5 zile de la efectuarea investigației. Rezultatele sunt livrate pe film și CD / DVD, împreună cu referatul medical detaliat.",
-    icon: <Hourglass className="w-6 h-6 text-gray-500" style={{ transform: "translateX(-5px)" }} />,
+    icon: <Hourglass className="w-6 h-6 text-gray-500" />,
     iconPosition: "left" as const,
   },
 ];

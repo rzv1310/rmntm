@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import ServiceCard from "@/components/ServiceCard";
-import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown, ArrowRight, Magnet } from "lucide-react";
+import { Phone, Calendar, Clock, Award, Users, Shield, ChevronDown, ArrowRight, Magnet, Hourglass } from "lucide-react";
 import DisplayCards from "@/components/ui/display-cards";
 import { useState } from "react";
 import { FaqAccordion } from "@/components/ui/faq-chat-accordion";
@@ -142,7 +142,7 @@ const faqs = [
     id: 4,
     question: "În cât timp primesc rezultatele iRM?",
     answer: "Rapoartele medicale sunt disponibile în aprox. 2-5 zile de la efectuarea investigației. Rezultatele sunt livrate pe film și CD / DVD, împreună cu referatul medical detaliat.",
-    icon: "⏱️",
+    icon: <Hourglass className="w-6 h-6 text-gray-500" style={{ marginLeft: "-5px" }} />,
     iconPosition: "left" as const,
   },
 ];

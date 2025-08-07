@@ -62,7 +62,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
 
   return (
     <div className="relative w-full flex justify-center overflow-hidden py-20">
-      <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700 relative -translate-x-2 md:translate-x-0"
+      <div className="relative flex flex-col items-start opacity-100 animate-in fade-in-0 duration-700"
            style={{ 
              minWidth: 'min(500px, 90vw)',
              minHeight: '300px',
@@ -70,7 +70,10 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
              height: '300px'
            }}>
         {displayCards.map((cardProps, index) => (
-          <DisplayCard key={index} {...cardProps} />
+          <div key={index} 
+               className={cn("absolute", index === 0 ? "top-0 left-0" : index === 1 ? "top-12 left-8 md:top-8 md:left-16" : "top-24 left-16 md:top-16 md:left-32")}>
+            <DisplayCard {...cardProps} />
+          </div>
         ))}
       </div>
     </div>

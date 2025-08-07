@@ -26,11 +26,7 @@ export default function ServiceCard({
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
           {isDecontCAS && (
-            <div className={`text-xs font-medium px-3 py-1 rounded-full min-w-0 h-auto border border-burgundy-dark text-burgundy-dark bg-transparent ${
-              title === "RMN Cerebral" ? "font-kalam" :
-              title === "RMN Coloană" ? "font-caveat" :
-              title === "RMN Articulații" ? "font-handlee" : ""
-            }`}>
+            <div className="text-xs font-medium px-3 py-1 rounded-full min-w-0 h-auto border border-burgundy-dark text-burgundy-dark bg-transparent font-kalam">
               Decontat CAS
             </div>
           )}

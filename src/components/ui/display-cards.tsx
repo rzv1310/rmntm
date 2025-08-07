@@ -48,13 +48,13 @@ interface DisplayCardsProps {
 export default function DisplayCards({ cards }: DisplayCardsProps) {
   const defaultCards = [
     {
-      className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+      className: "absolute top-0 left-0 hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
     },
     {
-      className: "[grid-area:stack] absolute top-32 md:relative md:top-auto translate-x-4 md:translate-x-16 md:translate-y-[5.25rem] hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+      className: "absolute top-32 left-4 md:top-[5.25rem] md:left-16 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
     },
     {
-      className: "[grid-area:stack] absolute top-64 md:relative md:top-auto translate-x-8 md:translate-x-32 md:translate-y-[9.25rem] hover:translate-y-5 md:hover:translate-y-10",
+      className: "absolute top-64 left-8 md:top-[9.25rem] md:left-32 hover:translate-y-5 md:hover:translate-y-10",
     },
   ];
 
@@ -62,7 +62,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
 
   return (
     <div className="relative w-full flex justify-center overflow-hidden py-20">
-      <div className="grid [grid-template-areas:'stack'] opacity-100 animate-in fade-in-0 duration-700 relative w-fit"
+      <div className="relative opacity-100 animate-in fade-in-0 duration-700 w-fit"
            style={{ 
              minWidth: 'min(380px, 90vw)',
              minHeight: '400px'

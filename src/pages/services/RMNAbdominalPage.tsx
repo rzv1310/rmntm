@@ -4,39 +4,19 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 import { AnimatedPhoneButton } from "@/components/ui/animated-phone-button";
-
-const indicatii = [
-  "Patologii hepatice (hepatite, tumori)",
-  "Afecțiuni biliare și coli biliare",
-  "Patologii pancreatice",
-  "Afecțiuni renale și suprarenal",
-  "Tumori abdominale și retroperitoneale",
-  "Evaluarea splinei",
-  "Patologii vasculare abdominale",
-  "Inflamații și infecții abdominale"
-];
-
-const avantaje = [
-  "Evaluare completă a organelor abdominale",
-  "Vizualizare detaliată fără radiații",
-  "Contrast natural între țesuturi",
-  "Diagnostic diferențial precis",
-  "Monitorizarea tratamentului",
-  "Evaluare vasculară detaliată"
-];
-
+const indicatii = ["Patologii hepatice (hepatite, tumori)", "Afecțiuni biliare și coli biliare", "Patologii pancreatice", "Afecțiuni renale și suprarenal", "Tumori abdominale și retroperitoneale", "Evaluarea splinei", "Patologii vasculare abdominale", "Inflamații și infecții abdominale"];
+const avantaje = ["Evaluare completă a organelor abdominale", "Vizualizare detaliată fără radiații", "Contrast natural între țesuturi", "Diagnostic diferențial precis", "Monitorizarea tratamentului", "Evaluare vasculară detaliată"];
 export default function RMNAbdominalPage() {
-  return (
-    <div className="min-h-screen pt-20 md:pt-32 pb-8">
+  return <div className="min-h-screen pt-20 md:pt-32 pb-8">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="mb-8">
-          <CustomBreadcrumb 
-            items={[
-              { label: "Servicii", href: "/servicii" },
-              { label: "RMN Abdominal" }
-            ]} 
-          />
+          <CustomBreadcrumb items={[{
+          label: "Servicii",
+          href: "/servicii"
+        }, {
+          label: "RMN Abdominal"
+        }]} />
         </div>
 
         {/* Header */}
@@ -58,50 +38,48 @@ export default function RMNAbdominalPage() {
         <AnimatedPhoneButton />
 
         {/* Introduction */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.1s'
+      }}>
           <div className="h-8"></div>
           <AnimatedCard>
             
-            <p className="text-muted-foreground leading-relaxed text-center">
-              RMN-ul abdominal oferă o evaluare completă și detaliată a organelor interne din cavitatea abdominală, 
-              fără utilizarea radiațiilor ionizante. Această investigație este esențială pentru diagnosticarea 
-              și monitorizarea unei game largi de afecțiuni ale ficatului, pancreasului, rinichilor și altor organe abdominale.
-            </p>
+            <p className="text-muted-foreground leading-relaxed text-center">RMN abdominal oferă o evaluare completă și detaliată a organelor interne din cavitatea abdominală, fără utilizarea radiațiilor ionizante. Această investigație este esențială pentru diagnosticarea și monitorizarea unei game largi de afecțiuni ale ficatului, pancreasului, rinichilor și altor organe abdominale.</p>
           </AnimatedCard>
         </section>
 
         {/* Indicații */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.2s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Abdominal</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Organe parenchimatoase</h3>
               <div className="space-y-3">
-                {indicatii.slice(0, 4).map((indicatie, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => <div key={index} className="flex items-start gap-3">
                     <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </AnimatedCard>
             
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Patologii complexe</h3>
               <div className="space-y-3">
-                {indicatii.slice(4).map((indicatie, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {indicatii.slice(4).map((indicatie, index) => <div key={index} className="flex items-start gap-3">
                     <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </AnimatedCard>
           </div>
         </section>
 
         {/* Pregătire */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.3s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
@@ -133,24 +111,26 @@ export default function RMNAbdominalPage() {
         </section>
 
         {/* Avantaje */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.4s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
             Avantajele unui RMN Abdominal
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {avantaje.map((avantaj, index) => (
-              <AnimatedCard key={index} className="h-auto">
+            {avantaje.map((avantaj, index) => <AnimatedCard key={index} className="h-auto">
                 <div className="flex items-start gap-3 h-full">
                   <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground text-center">{avantaj}</span>
                 </div>
-              </AnimatedCard>
-            ))}
+              </AnimatedCard>)}
           </div>
         </section>
 
         {/* Preț și decontare */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.5s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
@@ -172,7 +152,9 @@ export default function RMNAbdominalPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.6s'
+      }}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Abdominal</h2>
             <p className="text-white/90 mb-6">
@@ -195,6 +177,5 @@ export default function RMNAbdominalPage() {
         {/* Service Links */}
         <ServiceLinks currentHref="/servicii/rmn-abdominal" />
       </div>
-    </div>
-  );
+    </div>;
 }

@@ -135,7 +135,7 @@ export default function RMNAbdominalPage() {
         {/* Avantaje */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
-            Avantajele RMN Abdominal la Clinica Imagistică Avansată
+            Avantajele unui RMN Abdominal
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {avantaje.map((avantaj, index) => (

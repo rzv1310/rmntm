@@ -6,8 +6,8 @@ interface AnimatedPhoneButtonProps {
 
 export function AnimatedPhoneButton({ animationDelay = '0s' }: AnimatedPhoneButtonProps) {
   return (
-    <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay }}>
-      <a href="tel:0256404500" className="animated-phone-button">
+    <div className="flex justify-center mb-8">
+      <a href="tel:0256404500" className="animated-phone-button animate-fade-in" style={{ animationDelay }}>
         <div className="phone-bg"></div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

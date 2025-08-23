@@ -25,9 +25,7 @@ export default function RMNArticulatiiPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground">
               RMN Articulații
             </h1>
-            <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">
-              Decontat CAS
-            </GradientButton>
+            <GradientButton variant="variant" className="text-sm font-medium px-3 py-1 rounded-full min-w-0 h-auto">RMN articular (genunchi / umăr / gleznă / sacro-iliace / coxo-femurale / pumn) oferă imagini excepțional de clare ale articulațiilor și structurilor adiacente, fără utilizarea radiațiilor ionizante.  Este esențial pentru diagnosticarea precisă a leziunilor sportivilor, patologiilor degenerative și a unei game largi de afecțiuni articulare.</GradientButton>
           </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Investigații detaliate pentru sănătatea articulară cu imagini clare ale articulațiilor 

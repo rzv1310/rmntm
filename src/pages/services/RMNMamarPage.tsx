@@ -141,7 +141,7 @@ export default function RMNMamarPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {avantaje.map((avantaj, index) => (
               <AnimatedCard key={index} className="h-auto">
-                <div className="flex items-start gap-3 h-full">
+                <div className="flex items-start gap-3 h-full justify-start md:justify-center">
                   <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground text-left md:text-center">{avantaj}</span>
                 </div>

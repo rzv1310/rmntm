@@ -45,7 +45,7 @@ export default function RMNColoanaPage() {
           <div className="h-8"></div>
           <AnimatedCard>
             
-            <p className="text-muted-foreground leading-relaxed text-center">RMN coloană vertebrală evaluează în detaliu vertebrele și țesuturile moi adiacente, fără radiații ionizante. Această investigație este utilă atât în diagnostic, cât și în monitorizarea evoluției diferitelor afecțiuni ale coloanei vertebrale.</p>
+            <p className="text-muted-foreground leading-relaxed text-center">RMN coloană (lombară / toracală / cervicală) evaluează în detaliu vertebrele și țesuturile moi adiacente, fără radiații ionizante. Această investigație este utilă atât în diagnostic, cât și în monitorizarea evoluției diferitelor afecțiuni ale coloanei vertebrale.</p>
           </AnimatedCard>
         </section>
 

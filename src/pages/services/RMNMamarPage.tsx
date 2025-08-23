@@ -140,18 +140,12 @@ export default function RMNMamarPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {avantaje.map((avantaj, index) => (
-              <div 
-                key={index} 
-                className="relative w-full h-auto min-h-[8rem] rounded-xl p-6 bg-white/95 backdrop-blur-sm border-2 border-white"
-                style={{
-                  boxShadow: "20px 20px 60px #bebebe, -20px -20px 60px #ffffff"
-                }}
-              >
-                <div className="flex items-start md:items-center gap-3 h-full text-left md:text-center">
+              <AnimatedCard key={index} className="h-auto">
+                <div className="flex items-start gap-3 h-full">
                   <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">{avantaj}</span>
+                  <span className="text-muted-foreground text-center">{avantaj}</span>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </section>

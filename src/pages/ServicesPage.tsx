@@ -48,9 +48,9 @@ const services = [
     isDecontCAS: true,
   },
   {
-    title: "RMN Timișoara",
+    title: "Centru RMN Timișoara",
     description: "Servicii RMN de înaltă precizie în centrul orașului Timișoara, fără cozi de așteptare și cu rezultate precise.",
-    href: "/servicii/rmn-timisoara-medlife",
+    href: "/",
     highlights: ["Locație convenabilă", "Programări rapide", "Echipament de ultimă generație", "Rapoarte în timp util"],
     isDecontCAS: true,
   },

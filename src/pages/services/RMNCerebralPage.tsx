@@ -4,39 +4,19 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 import { AnimatedPhoneButton } from "@/components/ui/animated-phone-button";
-
-const indicatii = [
-  "Dureri de cap persistente (migrene, alte cauze neurologice)",
-  "Vertij și tulburări de echilibru",
-  "Convulsii și epilepsie",
-  "Tulburări de memorie (suspiciune boli neurodegenerative)",
-  "Suspiciune de tumori cerebrale",
-  "AVC – evaluare și monitorizare",
-  "Scleroză multiplă",
-  "Traumatisme craniocerebrale",
-];
-
-const avantaje = [
-  "Echipament RMN de înaltă rezoluție",
-  "Radiologi cu experiență în neuroimagistică",
-  "Programare rapidă",
-  "Fără expunere la radiații ionizante",
-  "Imagini detaliate ale creierului",
-  "Diagnostic precis și rapid",
-];
-
+const indicatii = ["Dureri de cap persistente (migrene, alte cauze neurologice)", "Vertij și tulburări de echilibru", "Convulsii și epilepsie", "Tulburări de memorie (suspiciune boli neurodegenerative)", "Suspiciune de tumori cerebrale", "AVC – evaluare și monitorizare", "Scleroză multiplă", "Traumatisme craniocerebrale"];
+const avantaje = ["Echipament RMN de înaltă rezoluție", "Radiologi cu experiență în neuroimagistică", "Programare rapidă", "Fără expunere la radiații ionizante", "Imagini detaliate ale creierului", "Diagnostic precis și rapid"];
 export default function RMNCerebralPage() {
-  return (
-    <div className="min-h-screen pt-20 md:pt-32 pb-8">
+  return <div className="min-h-screen pt-20 md:pt-32 pb-8">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="mb-8">
-          <CustomBreadcrumb 
-            items={[
-              { label: "Servicii", href: "/servicii" },
-              { label: "RMN Cerebral" }
-            ]} 
-          />
+          <CustomBreadcrumb items={[{
+          label: "Servicii",
+          href: "/servicii"
+        }, {
+          label: "RMN Cerebral"
+        }]} />
         </div>
 
         {/* Header */}
@@ -59,50 +39,49 @@ export default function RMNCerebralPage() {
         <AnimatedPhoneButton />
 
         {/* Introduction */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.1s'
+      }}>
           <div className="h-8"></div>
           <AnimatedCard>
             
-            <p className="text-muted-foreground leading-relaxed text-center">
-              RMN-ul cerebral este o investigație imagistică non-invazivă, critică pentru evaluarea detaliată 
-              a creierului și a structurilor sale, fără expunere la radiații ionizante. Această metodă oferă 
-              imagini de înaltă rezoluție care permit diagnosticarea precisă a unei game largi de afecțiuni neurologice.
-            </p>
+            <p className="text-muted-foreground leading-relaxed text-center">RMN cerebral este o investigație imagistică non-invazivă, critică pentru evaluarea detaliată a creierului și a structurilor sale, fără expunere la radiații ionizante. 
+Această metodă oferă imagini de înaltă rezoluție care permit diagnosticarea precisă a unei game largi de afecțiuni neurologice.</p>
           </AnimatedCard>
         </section>
 
         {/* Indicații */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.2s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Cerebral</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Afecțiuni neurologice</h3>
               <div className="space-y-3">
-                {indicatii.slice(0, 4).map((indicatie, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => <div key={index} className="flex items-start gap-3">
                     <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </AnimatedCard>
             
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Diagnostic și urmărire</h3>
               <div className="space-y-3">
-                {indicatii.slice(4).map((indicatie, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {indicatii.slice(4).map((indicatie, index) => <div key={index} className="flex items-start gap-3">
                     <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </AnimatedCard>
           </div>
         </section>
 
         {/* Pregătire */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.3s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
@@ -134,24 +113,26 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* Avantaje */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.4s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
             Avantajele unui RMN Cap
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {avantaje.map((avantaj, index) => (
-              <AnimatedCard key={index} className="h-auto">
+            {avantaje.map((avantaj, index) => <AnimatedCard key={index} className="h-auto">
                 <div className="flex items-start gap-3 h-full">
                   <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground text-center">{avantaj}</span>
                 </div>
-              </AnimatedCard>
-            ))}
+              </AnimatedCard>)}
           </div>
         </section>
 
         {/* Preț și decontare */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.5s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
@@ -173,7 +154,9 @@ export default function RMNCerebralPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.6s'
+      }}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Cerebral</h2>
             <p className="text-white/90 mb-6">
@@ -196,6 +179,5 @@ export default function RMNCerebralPage() {
         {/* Service Links */}
         <ServiceLinks currentHref="/servicii/rmn-cerebral" />
       </div>
-    </div>
-  );
+    </div>;
 }

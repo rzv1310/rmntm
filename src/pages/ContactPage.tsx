@@ -48,7 +48,7 @@ export default function ContactPage() {
                   <Clock className="h-6 w-6 text-red-500 mt-1" />
                   <div>
                     <h3 className="font-medium text-foreground">Program</h3>
-                    <p className="text-muted-foreground">Luni–Vineri 08:00 - 20:00</p>
+                    <p className="text-muted-foreground">Luni-Vineri 08:00 - 20:00</p>
                   </div>
                 </div>
               </div>

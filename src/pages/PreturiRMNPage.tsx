@@ -65,7 +65,7 @@ export default function PreturiRMNPage() {
                 <h3 className="text-lg font-semibold text-amber-800 mb-2">Observații importante</h3>
                 <ul className="space-y-2 text-amber-700">
                   <li>• Prețurile sunt orientative și pot varia în funcție de complexitate</li>
-                  <li>• Substanța de contrast: cost suplimentar aproximativ 100–150 lei</li>
+                  <li>• Substanța de contrast: cost suplimentar aproximativ 100-150 lei</li>
                   <li>• Reduceri pentru investigații multiple în aceeași vizită</li>
                   <li>• Decontare disponibilă prin CAS și asigurări private</li>
                 </ul>

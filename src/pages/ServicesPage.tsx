@@ -48,8 +48,8 @@ const services = [
     isDecontCAS: true,
   },
   {
-    title: "RMN Timișoara - Medlife",
-    description: "Servicii RMN de înaltă precizie la Medlife Timișoara, cu echipament de ultimă generație și personal specializat.",
+    title: "RMN Timișoara",
+    description: "Servicii RMN de înaltă precizie în centrul orașului Timișoara, fără cozi de așteptare și cu rezultate precise.",
     href: "/servicii/rmn-timisoara-medlife",
     highlights: ["Locație convenabilă", "Programări rapide", "Echipament de ultimă generație", "Rapoarte în timp util"],
     isDecontCAS: true,
@@ -71,8 +71,8 @@ export default function ServicesPage() {
             Servicii RMN Complete
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Explorează gama noastră completă de servicii RMN. De la investigații cerebrale la evaluări articulare, 
-            oferim diagnostic de înaltă precizie cu echipament de ultimă generație și personal medical specializat.
+            Explorează gama noastră de examinări RMN. De la investigații cerebrale la evaluări articulare, 
+            oferim diagnostic de înaltă precizie cu echipament de ultimă generație și personal medical dedicat.
           </p>
         </div>
 

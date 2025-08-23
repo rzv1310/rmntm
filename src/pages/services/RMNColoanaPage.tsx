@@ -4,39 +4,19 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 import { AnimatedPhoneButton } from "@/components/ui/animated-phone-button";
-
-const indicatii = [
-  "Dureri de gât și blocaje cervicale",
-  "Hernii de disc cervicale C1–C7",
-  "Instabilitate cervicală",
-  "Dureri lombare (lombalgii)",
-  "Hernii de disc lombare L1–S1",
-  "Canal lombar îngust (stenoză)",
-  "Iscialgia și dureri radiante",
-  "Deformări (scolioză, cifoză)"
-];
-
-const avantaje = [
-  "Vizualizare completă a discurilor intervertebrale",
-  "Evaluarea măduvei spinării și a nervilor",
-  "Fără expunere la radiații",
-  "Detalii anatomice de înaltă rezoluție",
-  "Diagnostic diferențial precis",
-  "Monitorizarea evoluției tratamentului"
-];
-
+const indicatii = ["Dureri de gât și blocaje cervicale", "Hernii de disc cervicale C1–C7", "Instabilitate cervicală", "Dureri lombare (lombalgii)", "Hernii de disc lombare L1–S1", "Canal lombar îngust (stenoză)", "Iscialgia și dureri radiante", "Deformări (scolioză, cifoză)"];
+const avantaje = ["Vizualizare completă a discurilor intervertebrale", "Evaluarea măduvei spinării și a nervilor", "Fără expunere la radiații", "Detalii anatomice de înaltă rezoluție", "Diagnostic diferențial precis", "Monitorizarea evoluției tratamentului"];
 export default function RMNColoanaPage() {
-  return (
-    <div className="min-h-screen pt-20 md:pt-32 pb-8">
+  return <div className="min-h-screen pt-20 md:pt-32 pb-8">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="mb-8">
-          <CustomBreadcrumb 
-            items={[
-              { label: "Servicii", href: "/servicii" },
-              { label: "RMN Coloană" }
-            ]} 
-          />
+          <CustomBreadcrumb items={[{
+          label: "Servicii",
+          href: "/servicii"
+        }, {
+          label: "RMN Coloană"
+        }]} />
         </div>
 
         {/* Header */}
@@ -59,50 +39,48 @@ export default function RMNColoanaPage() {
         <AnimatedPhoneButton />
 
         {/* Introduction */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.1s'
+      }}>
           <div className="h-8"></div>
           <AnimatedCard>
             
-            <p className="text-muted-foreground leading-relaxed text-center">
-              RMN-ul coloanei vertebrale evaluează în detaliu vertebrele și țesuturile moi adiacente, 
-              fără radiații ionizante. Această investigație este utilă atât în diagnostic, cât și în 
-              monitorizarea evoluției diferitelor afecțiuni ale coloanei vertebrale.
-            </p>
+            <p className="text-muted-foreground leading-relaxed text-center">RMN coloană vertebrală evaluează în detaliu vertebrele și țesuturile moi adiacente, fără radiații ionizante. Această investigație este utilă atât în diagnostic, cât și în monitorizarea evoluției diferitelor afecțiuni ale coloanei vertebrale.</p>
           </AnimatedCard>
         </section>
 
         {/* Indicații */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.2s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Indicații pentru RMN Coloană</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Segmente cervicale și dorsale</h3>
               <div className="space-y-3">
-                {indicatii.slice(0, 4).map((indicatie, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {indicatii.slice(0, 4).map((indicatie, index) => <div key={index} className="flex items-start gap-3">
                     <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </AnimatedCard>
             
             <AnimatedCard>
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Segmente lombare și patologii</h3>
               <div className="space-y-3">
-                {indicatii.slice(4).map((indicatie, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                {indicatii.slice(4).map((indicatie, index) => <div key={index} className="flex items-start gap-3">
                     <AlertCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground leading-relaxed">{indicatie}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </AnimatedCard>
           </div>
         </section>
 
         {/* Pregătire */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.3s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Pregătirea pentru investigație</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
@@ -134,24 +112,26 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* Avantaje */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.4s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">
             Avantajele RMN Coloană
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {avantaje.map((avantaj, index) => (
-              <AnimatedCard key={index} className="h-auto">
+            {avantaje.map((avantaj, index) => <AnimatedCard key={index} className="h-auto">
                 <div className="flex items-start gap-3 h-full">
                   <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground text-center">{avantaj}</span>
                 </div>
-              </AnimatedCard>
-            ))}
+              </AnimatedCard>)}
           </div>
         </section>
 
         {/* Preț și decontare */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.5s'
+      }}>
           <h2 className="text-2xl font-semibold text-foreground mb-6">Preț și decontare</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedCard>
@@ -173,7 +153,9 @@ export default function RMNColoanaPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.6s'
+      }}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Programează-te pentru RMN Coloană</h2>
             <p className="text-white/90 mb-6">
@@ -196,6 +178,5 @@ export default function RMNColoanaPage() {
         {/* Service Links */}
         <ServiceLinks currentHref="/servicii/rmn-coloana" />
       </div>
-    </div>
-  );
+    </div>;
 }

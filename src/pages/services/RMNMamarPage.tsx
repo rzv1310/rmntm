@@ -143,7 +143,7 @@ export default function RMNMamarPage() {
               <AnimatedCard key={index} className="h-auto">
                 <div className="flex items-start gap-3 h-full">
                   <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground text-center">{avantaj}</span>
+                  <span className="text-muted-foreground text-left md:text-center">{avantaj}</span>
                 </div>
               </AnimatedCard>
             ))}

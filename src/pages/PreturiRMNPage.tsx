@@ -1,22 +1,29 @@
-
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Phone, Info } from "lucide-react";
-
-const preturi = [
-  { serviciu: "RMN cerebral nativ", pret: "835,00 lei" },
-  { serviciu: "RMN mamar bilateral nativ", pret: "850,00 lei" },
-  { serviciu: "RMN genunchi bilateral nativ", pret: "1.015,00 lei" },
-  { serviciu: "RMN abdomen superior nativ", pret: "835,00 lei" },
-  { serviciu: "RMN pelvis nativ", pret: "835,00 lei" },
-];
-
+const preturi = [{
+  serviciu: "RMN cerebral nativ",
+  pret: "835,00 lei"
+}, {
+  serviciu: "RMN mamar bilateral nativ",
+  pret: "850,00 lei"
+}, {
+  serviciu: "RMN genunchi bilateral nativ",
+  pret: "1.015,00 lei"
+}, {
+  serviciu: "RMN abdomen superior nativ",
+  pret: "835,00 lei"
+}, {
+  serviciu: "RMN pelvis nativ",
+  pret: "835,00 lei"
+}];
 export default function PreturiRMNPage() {
-  return (
-    <div className="min-h-screen pt-20 md:pt-32 pb-8">
+  return <div className="min-h-screen pt-20 md:pt-32 pb-8">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <CustomBreadcrumb items={[{ label: "Prețuri RMN" }]} />
+          <CustomBreadcrumb items={[{
+          label: "Prețuri RMN"
+        }]} />
         </div>
 
         <div className="mb-12 animate-fade-in-up">
@@ -24,8 +31,10 @@ export default function PreturiRMNPage() {
           <p className="text-xl text-muted-foreground">Transparență și accesibilitate în serviciile noastre.</p>
         </div>
 
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <h2 className="text-2xl font-semibold text-foreground mb-6">Listă tarife orientative</h2>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.1s'
+      }}>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">Listă tarife</h2>
           <div className="medical-card rounded-xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -36,19 +45,19 @@ export default function PreturiRMNPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {preturi.map((item, index) => (
-                    <tr key={index} className="border-t border-border">
+                  {preturi.map((item, index) => <tr key={index} className="border-t border-border">
                       <td className="px-6 py-4 text-muted-foreground">{item.serviciu}</td>
                       <td className="px-6 py-4 text-right font-semibold text-primary">{item.pret}</td>
-                    </tr>
-                  ))}
+                    </tr>)}
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <section className="mb-12 animate-fade-in-up" style={{
+        animationDelay: '0.2s'
+      }}>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
             <div className="flex items-start gap-3">
               <Info className="h-6 w-6 text-amber-600 mt-0.5" />
@@ -65,7 +74,9 @@ export default function PreturiRMNPage() {
           </div>
         </section>
 
-        <section className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <section className="animate-fade-in-up" style={{
+        animationDelay: '0.3s'
+      }}>
           <div className="bg-black rounded-xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Pentru informații exacte</h2>
             <p className="text-white/90 mb-6">Contactează-ne pentru prețuri actualizate și detalii despre decontare.</p>
@@ -78,6 +89,5 @@ export default function PreturiRMNPage() {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 }

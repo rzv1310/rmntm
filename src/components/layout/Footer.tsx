@@ -1,47 +1,57 @@
-
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-
 const footerNavigation = {
-  servicii: [
-    { name: "RMN Cerebral", href: "/servicii/rmn-cerebral" },
-    { name: "RMN Coloană", href: "/servicii/rmn-coloana" },
-    { name: "RMN Articulații", href: "/servicii/rmn-articulatii" },
-    { name: "RMN Abdominal", href: "/servicii/rmn-abdominal" },
-    { name: "RMN Pelvin", href: "/servicii/rmn-pelvin" },
-    { name: "RMN Mamar", href: "/servicii/rmn-mamar" },
-  ],
-  informatii: [
-    { name: "Prețuri RMN", href: "/preturi-rmn" },
-    { name: "RMN prin CAS", href: "/rmn-prin-cas" },
-    { name: "Contact", href: "/contact" },
-  ],
-  legal: [
-    { name: "Termeni și Condiții", href: "/legal/termeni-si-conditii" },
-    { name: "Politica Cookies", href: "/legal/politica-cookies" },
-    { name: "GDPR", href: "/legal/gdpr" },
-  ],
+  servicii: [{
+    name: "RMN Cerebral",
+    href: "/servicii/rmn-cerebral"
+  }, {
+    name: "RMN Coloană",
+    href: "/servicii/rmn-coloana"
+  }, {
+    name: "RMN Articulații",
+    href: "/servicii/rmn-articulatii"
+  }, {
+    name: "RMN Abdominal",
+    href: "/servicii/rmn-abdominal"
+  }, {
+    name: "RMN Pelvin",
+    href: "/servicii/rmn-pelvin"
+  }, {
+    name: "RMN Mamar",
+    href: "/servicii/rmn-mamar"
+  }],
+  informatii: [{
+    name: "Prețuri RMN",
+    href: "/preturi-rmn"
+  }, {
+    name: "RMN prin CAS",
+    href: "/rmn-prin-cas"
+  }, {
+    name: "Contact",
+    href: "/contact"
+  }],
+  legal: [{
+    name: "Termeni și Condiții",
+    href: "/legal/termeni-si-conditii"
+  }, {
+    name: "Politica Cookies",
+    href: "/legal/politica-cookies"
+  }, {
+    name: "GDPR",
+    href: "/legal/gdpr"
+  }]
 };
-
 export default function Footer() {
-  return (
-    <footer className="bg-gradient-soft border-t border-border">
+  return <footer className="bg-gradient-soft border-t border-border">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Brand Section */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" 
-                alt="RMN Logo" 
-                className="h-8 w-8"
-              />
+              <img src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" alt="RMN Logo" className="h-8 w-8" />
               <h2 className="text-lg font-semibold text-foreground tracking-wider uppercase">RMN TIMIȘOARA</h2>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Platforma ta de încredere pentru informații complete despre serviciile RMN. 
-              Găsește investigația potrivită și programează-te rapid.
-            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">Platforma ta de încredere pentru investigații RMN în Timișoara. Găsește examinarea potrivită și programează-te rapid.</p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-burgundy-dark" />
@@ -73,16 +83,11 @@ export default function Footer() {
                 Servicii RMN
               </h3>
               <ul className="space-y-3">
-                {footerNavigation.servicii.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      to={item.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
+                {footerNavigation.servicii.map(item => <li key={item.name}>
+                    <Link to={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {item.name}
                     </Link>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
@@ -91,16 +96,11 @@ export default function Footer() {
                 Informații
               </h3>
               <ul className="space-y-3">
-                {footerNavigation.informatii.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      to={item.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
+                {footerNavigation.informatii.map(item => <li key={item.name}>
+                    <Link to={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {item.name}
                     </Link>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
           </div>
@@ -111,16 +111,11 @@ export default function Footer() {
               Legal
             </h3>
             <ul className="space-y-3">
-              {footerNavigation.legal.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {footerNavigation.legal.map(item => <li key={item.name}>
+                  <Link to={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
@@ -136,6 +131,5 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }

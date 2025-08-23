@@ -1,8 +1,12 @@
 import React from 'react';
 
-export function AnimatedPhoneButton() {
+interface AnimatedPhoneButtonProps {
+  animationDelay?: string;
+}
+
+export function AnimatedPhoneButton({ animationDelay = '0s' }: AnimatedPhoneButtonProps) {
   return (
-    <div className="flex justify-center mb-8">
+    <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay }}>
       <a href="tel:0256404500" className="animated-phone-button">
         <div className="phone-bg"></div>
         <svg

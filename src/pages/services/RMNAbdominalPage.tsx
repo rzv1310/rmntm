@@ -55,7 +55,7 @@ export default function RMNAbdominalPage() {
         </div>
 
         {/* Phone Button */}
-        <AnimatedPhoneButton />
+        <AnimatedPhoneButton animationDelay="0.5s" />
 
         {/* Introduction */}
         <section className="mb-12 animate-fade-in-up" style={{animationDelay: '0.1s'}}>

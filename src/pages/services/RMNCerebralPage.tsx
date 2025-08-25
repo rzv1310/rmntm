@@ -4,7 +4,7 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 import { AnimatedPhoneButton } from "@/components/ui/animated-phone-button";
-const indicatii = ["Dureri de cap persistente (migrene, alte cauze neurologice)", "Vertij și tulburări de echilibru", "Convulsii și epilepsie", "Tulburări de memorie (suspiciune boli neurodegenerative)", "Suspiciune de tumori cerebrale", "AVC - evaluare și monitorizare", "Scleroză multiplă", "Traumatisme craniocerebrale"];
+const indicatii = ["Dureri de cap persistente (migrene, alte cauze neurologice)", "Vertij și tulburări de echilibru", "Convulsii și epilepsie", "Tulburări de memorie (suspiciune boli neurodegenerative)", "Suspiciune de tumori cerebrale", "AVC – evaluare și monitorizare", "Scleroză multiplă", "Traumatisme craniocerebrale"];
 const avantaje = ["Echipament RMN de înaltă rezoluție", "Radiologi cu experiență în neuroimagistică", "Programare rapidă", "Fără expunere la radiații ionizante", "Imagini detaliate ale creierului", "Diagnostic precis și rapid"];
 export default function RMNCerebralPage() {
   return <div className="min-h-screen pt-20 md:pt-32 pb-8">

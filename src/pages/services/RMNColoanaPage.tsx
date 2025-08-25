@@ -4,7 +4,7 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { Phone, Clock, AlertCircle, CheckCircle } from "lucide-react";
 import { AnimatedPhoneButton } from "@/components/ui/animated-phone-button";
-const indicatii = ["Dureri de gât și blocaje cervicale", "Hernii de disc cervicale C1–C7", "Instabilitate cervicală", "Dureri lombare (lombalgii)", "Hernii de disc lombare L1–S1", "Canal lombar îngust (stenoză)", "Iscialgia și dureri radiante", "Deformări (scolioză, cifoză)"];
+const indicatii = ["Dureri de gât și blocaje cervicale", "Hernii de disc cervicale C1-C7", "Instabilitate cervicală", "Dureri lombare (lombalgii)", "Hernii de disc lombare L1-S1", "Canal lombar îngust (stenoză)", "Iscialgia și dureri radiante", "Deformări (scolioză, cifoză)"];
 const avantaje = ["Vizualizare completă a discurilor intervertebrale", "Evaluarea măduvei spinării și a nervilor", "Fără expunere la radiații", "Detalii anatomice de înaltă rezoluție", "Diagnostic diferențial precis", "Monitorizarea evoluției tratamentului"];
 export default function RMNColoanaPage() {
   return <div className="min-h-screen pt-20 md:pt-32 pb-8">

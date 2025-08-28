@@ -100,9 +100,6 @@ export default function LegalPage() {
                 0256 404 500
               </a>
             </GradientButton>
-            <GradientButton asChild>
-              <a href="/contact">Contactează-ne</a>
-            </GradientButton>
           </div>
         </div>
 

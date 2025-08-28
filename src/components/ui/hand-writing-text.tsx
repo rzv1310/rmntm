@@ -49,14 +49,14 @@ function HandWrittenTitle({
                 </motion.svg>
             </div>
             <div className="relative text-center z-10 flex flex-col items-center justify-center">
-                <motion.h1
+                <motion.p
                     className="text-lg md:text-3xl text-black dark:text-white tracking-tighter flex items-center gap-2 font-handwritten"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
                     {title}
-                </motion.h1>
+                </motion.p>
                 {subtitle && (
                     <motion.p
                         className="text-xl text-black/80 dark:text-white/80 font-handwritten font-light"

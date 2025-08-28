@@ -19,6 +19,7 @@ import ContactPage from "./pages/ContactPage";
 import TermeniPage from "./pages/legal/TermeniPage";
 import CookiesPage from "./pages/legal/CookiesPage";
 import GDPRPage from "./pages/legal/GDPRPage";
+import LegalPage from "./pages/legal/LegalPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="rmn-prin-cas" element={<RMNPrinCASPage />} />
             <Route path="preturi-rmn" element={<PreturiRMNPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="legal" element={<LegalPage />} />
             <Route path="legal/termeni-si-conditii" element={<TermeniPage />} />
             <Route path="legal/politica-cookies" element={<CookiesPage />} />
             <Route path="legal/gdpr" element={<GDPRPage />} />

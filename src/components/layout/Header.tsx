@@ -70,7 +70,8 @@ export default function Header() {
           <Link to="/" className="flex items-center py-2 px-3 rounded-lg transition-all hover:scale-105">
             <img 
               src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" 
-              alt="RMN Doctor Guide Logo" 
+              alt="RMN Timișoara Logo" 
+              title="RMN Timișoara Logo"
               className="h-16 w-auto"
             />
           </Link>

@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <img src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" alt="RMN Logo" className="h-8 w-8" />
+              <img src="/lovable-uploads/77a7121b-7ef8-461f-81b5-ec894ecdecb8.png" alt="RMN Timișoara Logo" title="RMN Timișoara Logo" className="h-8 w-8" />
               <h2 className="text-lg font-semibold text-foreground tracking-wider uppercase">RMN TIMIȘOARA</h2>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">Platforma ta de încredere pentru investigații RMN în Timișoara. Găsește examinarea potrivită și programează-te rapid.</p>

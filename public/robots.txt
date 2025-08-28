@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://rmn-timisoara.lovable.app/sitemap.xml
+Sitemap: https://rmntimisoara.ro/sitemap.xml

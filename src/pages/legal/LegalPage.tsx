@@ -1,28 +1,25 @@
 import { Link } from "react-router-dom";
 import CustomBreadcrumb from "@/components/CustomBreadcrumb";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { FileText, Shield, Cookie, ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 const legalDocuments = [
   {
     title: "Termeni și Condiții",
     description: "Termenii și condițiile de utilizare a platformei RMN Timișoara pentru servicii medicale de înaltă calitate.",
     href: "/legal/termeni-si-conditii",
-    icon: FileText,
     highlights: ["Condiții de utilizare", "Drepturi și obligații", "Servicii medicale", "Responsabilități"]
   },
   {
     title: "Politica Cookies",
     description: "Informații detaliate despre utilizarea cookie-urilor pe site-ul nostru și cum acestea îmbunătățesc experiența dvs.",
     href: "/legal/politica-cookies",
-    icon: Cookie,
     highlights: ["Tipuri de cookies", "Managementul preferințelor", "Cookie-uri tehnice", "Confidențialitate"]
   },
   {
     title: "Politica de Confidențialitate (GDPR)",
     description: "Cum procesăm și protejăm datele dumneavoastră personale în conformitate cu reglementările GDPR.",
     href: "/legal/gdpr",
-    icon: Shield,
     highlights: ["Protecția datelor", "Drepturi GDPR", "Securitate informații", "Consimțământ prelucrat"]
   }
 ];
@@ -54,18 +51,12 @@ export default function LegalPage() {
         {/* Legal Documents Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {legalDocuments.map((doc, index) => {
-            const IconComponent = doc.icon;
             return (
               <div key={doc.href} className="animate-fade-in-up" style={{animationDelay: `${0.1 + index * 0.1}s`}}>
                 <div className="medical-card service-card rounded-xl p-6 h-full flex flex-col hover:-translate-y-2 transition-all duration-300 ease-out hover:shadow-lg">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <IconComponent className="w-5 h-5 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-foreground">{doc.title}</h3>
-                      </div>
+                      <h3 className="text-xl font-semibold text-foreground">{doc.title}</h3>
                     </div>
                     
                     <p className="text-muted-foreground mb-4 leading-relaxed">{doc.description}</p>
